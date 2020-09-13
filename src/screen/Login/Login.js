@@ -1,13 +1,15 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+
+import { CONSTANT } from '../../constant';
+import { LoginView, Title, TitleView } from './Login.style';
 
 const Login = () => {
   return (
-    <>
-      <View>
-        <Text>Login</Text>
-      </View>
-    </>
+    <LoginView>
+      <TitleView>
+        <Title>{CONSTANT.APP_NAME}</Title>
+      </TitleView>
+    </LoginView>
   );
 };
 

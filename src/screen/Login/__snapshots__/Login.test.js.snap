@@ -1,9 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login should match snapshot 1`] = `
-<View>
-  <Text>
-    Login
-  </Text>
-</View>
+<RCTScrollView
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#1abfbf",
+        "paddingVertical": 40,
+      },
+    ]
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "marginTop": 40,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontFamily": "System",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#ffffff",
+              "fontSize": 80,
+              "textTransform": "uppercase",
+            },
+          ]
+        }
+      >
+        socioh
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
 `;

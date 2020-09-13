@@ -7,7 +7,7 @@ import Login from '../screen/Login';
 const Stack = createStackNavigator();
 
 export default () => (
-  <Stack.Navigator initialRouteName={ROUTE.LOGIN}>
+  <Stack.Navigator initialRouteName={ROUTE.LOGIN} headerMode="none">
     <Stack.Screen name={ROUTE.LOGIN} component={Login} />
   </Stack.Navigator>
 );
