@@ -262,7 +262,7 @@ exports[`Login should match snapshot 1`] = `
       </Text>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         forwardedRef={[Function]}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -296,6 +296,7 @@ exports[`Login should match snapshot 1`] = `
             "shadowRadius": null,
           }
         }
+        testID="sign-up"
       >
         <Text
           style={
@@ -319,7 +320,7 @@ exports[`Login should match snapshot 1`] = `
             ]
           }
         >
-          Sign-in here
+          Sign-up here
         </Text>
       </View>
     </View>

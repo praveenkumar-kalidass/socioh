@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { CONSTANT, ICON, TRANSLATION } from '../../constant';
+import { CONSTANT, ICON, ROUTE, TRANSLATION } from '../../constant';
 import {
   LoginContainer,
   Title,
@@ -19,7 +20,11 @@ import {
   SignUpDescription,
 } from './Login.style';
 
-const Login = () => {
+const Login = ({ navigation }) => {
+  const navigateToSignup = () => {
+    navigation.navigate(ROUTE.SIGNUP);
+  };
+
   return (
     <LoginContainer>
       <TitleContainer>
@@ -40,13 +45,23 @@ const Login = () => {
           <SignUpDescription small>
             {TRANSLATION.DONT_HAVE_ACCOUNT}
           </SignUpDescription>
-          <SignUpLink transparent full>
-            <SignUpText>{TRANSLATION.SIGN_IN_HERE}</SignUpText>
+          <SignUpLink
+            transparent
+            full
+            onPress={navigateToSignup}
+            testID="sign-up">
+            <SignUpText>{TRANSLATION.SIGN_UP_HERE}</SignUpText>
           </SignUpLink>
         </SignUpContainer>
       </ButtonContainer>
     </LoginContainer>
   );
+};
+
+Login.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }),
 };
 
 export default Login;
