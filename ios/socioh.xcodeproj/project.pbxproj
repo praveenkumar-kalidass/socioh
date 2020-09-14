@@ -21,6 +21,8 @@
 		8AB37B0AC62EFECA1BF8E5F9 /* libPods-socioh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2344CB12C37ED83B4A7A18EA /* libPods-socioh.a */; };
 		A1A22BE767197114EE0361DD /* libPods-socioh-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CC9D19C9BD7D0A0DA654C1 /* libPods-socioh-tvOS.a */; };
 		E17ECC87250E2732006BE0FE /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E17ECC86250E2732006BE0FE /* Roboto.ttf */; };
+		E17ECC8B250E3D6D006BE0FE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E17ECC8A250E3D6D006BE0FE /* FontAwesome.ttf */; };
+		E17ECC8D250E3E3C006BE0FE /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E17ECC8C250E3E3C006BE0FE /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		C278E2D73920E7D0346C9933 /* Pods-socioh-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socioh-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-socioh-tvOSTests/Pods-socioh-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1BD21121E814380EAFD1168 /* libPods-socioh-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socioh-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17ECC86250E2732006BE0FE /* Roboto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Roboto.ttf; path = "../../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
+		E17ECC8A250E3D6D006BE0FE /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = ../../android/app/src/main/assets/fonts/FontAwesome.ttf; sourceTree = "<group>"; };
+		E17ECC8C250E3E3C006BE0FE /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = ../../android/app/src/main/assets/fonts/MaterialIcons.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -188,6 +192,8 @@
 		E17ECC85250E26E9006BE0FE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E17ECC8C250E3E3C006BE0FE /* MaterialIcons.ttf */,
+				E17ECC8A250E3D6D006BE0FE /* FontAwesome.ttf */,
 				E17ECC86250E2732006BE0FE /* Roboto.ttf */,
 			);
 			path = fonts;
@@ -351,6 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17ECC87250E2732006BE0FE /* Roboto.ttf in Resources */,
+				E17ECC8B250E3D6D006BE0FE /* FontAwesome.ttf in Resources */,
+				E17ECC8D250E3E3C006BE0FE /* MaterialIcons.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
