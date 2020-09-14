@@ -10,6 +10,7 @@ export const LoginView = styled.ScrollView`
 
 export const Title = styled(Text)`
   color: ${COLOR.WHITE};
+  font-family: Roboto;
   font-size: ${FONT.SIZE_80};
   text-transform: uppercase;
 `;
