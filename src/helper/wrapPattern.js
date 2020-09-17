@@ -4,8 +4,8 @@ import { Background1 } from '../component/Background';
 
 const wrapPattern = ({ Component }) => () => (
   <>
-    <Component />
     <Background1 />
+    <Component />
   </>
 );
 
