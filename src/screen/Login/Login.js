@@ -49,7 +49,7 @@ const Login = ({ navigation }) => {
             transparent
             full
             onPress={navigateToSignup}
-            testID="sign-up">
+            testID="sign_up">
             <SignUpText>{TRANSLATION.SIGN_UP_HERE}</SignUpText>
           </SignUpLink>
         </SignUpContainer>

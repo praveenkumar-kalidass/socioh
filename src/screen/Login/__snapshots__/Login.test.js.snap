@@ -296,7 +296,7 @@ exports[`Login should match snapshot 1`] = `
             "shadowRadius": null,
           }
         }
-        testID="sign-up"
+        testID="sign_up"
       >
         <Text
           style={

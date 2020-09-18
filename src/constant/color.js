@@ -4,4 +4,5 @@ export default {
   BACKGROUND: '#f0f8f8',
   WHITE: '#ffffff',
   BLACK: '#000000',
+  RED: '#ff0000',
 };

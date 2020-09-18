@@ -168,9 +168,12 @@ Array [
             <TextInput
               allowFontScaling={true}
               editable={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
               placeholder="Name"
               placeholderTextColor="#575757"
               rejectResponderTermination={true}
+              secureTextEntry={false}
               style={
                 Object {
                   "color": "#000",
@@ -183,6 +186,7 @@ Array [
                 }
               }
               underlineColorAndroid="rgba(0,0,0,0)"
+              value=""
             />
           </View>
         </View>
@@ -259,9 +263,12 @@ Array [
             <TextInput
               allowFontScaling={true}
               editable={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
               placeholder="E-mail"
               placeholderTextColor="#575757"
               rejectResponderTermination={true}
+              secureTextEntry={false}
               style={
                 Object {
                   "color": "#000",
@@ -274,6 +281,7 @@ Array [
                 }
               }
               underlineColorAndroid="rgba(0,0,0,0)"
+              value=""
             />
           </View>
         </View>
@@ -350,10 +358,12 @@ Array [
             <TextInput
               allowFontScaling={true}
               editable={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
               placeholder="Password"
               placeholderTextColor="#575757"
               rejectResponderTermination={true}
-              secureTextEntry={true}
+              secureTextEntry={false}
               style={
                 Object {
                   "color": "#000",
@@ -366,6 +376,7 @@ Array [
                 }
               }
               underlineColorAndroid="rgba(0,0,0,0)"
+              value=""
             />
           </View>
         </View>

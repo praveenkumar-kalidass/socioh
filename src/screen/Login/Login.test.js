@@ -21,7 +21,7 @@ describe('Login', () => {
   it('should navigate on press of signup link', () => {
     const { getByTestId } = render(<Login navigation={mockNavigation} />);
 
-    act(() => fireEvent(getByTestId('sign-up'), 'onPress'));
+    act(() => fireEvent(getByTestId('sign_up'), 'onPress'));
 
     expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('SIGNUP');

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Button, CheckBox, Item, Text } from 'native-base';
 
-import { COLOR, SPACING } from '../../constant';
+import { COLOR, FONT, SPACING } from '../../constant';
 
 export const SignupContainer = styled.View`
   flex: 1;
@@ -20,6 +20,12 @@ export const InputLabel = styled(Text)`
 export const InputGrid = styled(Item)`
   background-color: ${COLOR.BACKGROUND};
   border-radius: ${SPACING.SPACE_5};
+`;
+
+export const InputErrorText = styled(Text)`
+  color: ${COLOR.RED};
+  font-size: ${FONT.SIZE_12};
+  margin-top: ${SPACING.SPACE_10};
 `;
 
 export const SignupButton = styled(Button)`
