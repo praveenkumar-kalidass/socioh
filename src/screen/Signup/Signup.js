@@ -28,14 +28,14 @@ const Signup = () => {
     });
   };
 
-  const validateInput = () => {
+  const handleValidation = () => {
     setErrorMessages(validateFields(SCHEMA, fields, INITIAL_STATE));
   };
 
   return (
     <SignupContainer>
       <Card>
-        {FIELDS.map((field, index) => (
+        <For each="field" index="index" of={FIELDS}>
           <CardItem key={`signup_input_${index}`}>
             <InputContainer>
               <InputLabel>{field.label}</InputLabel>
@@ -44,16 +44,16 @@ const Signup = () => {
                   placeholder={field.placeholder}
                   value={fields[field.key]}
                   onChangeText={(value) => handleFieldChange(field.key, value)}
-                  onBlur={() => validateInput()}
+                  onBlur={() => handleValidation()}
                   secureTextEntry={field === CONSTANT.PASSWORD}
                 />
               </InputGrid>
-              {Boolean(errorMessages[field.key]) && (
+              <If condition={errorMessages[field.key]}>
                 <InputErrorText>{errorMessages[field.key]}</InputErrorText>
-              )}
+              </If>
             </InputContainer>
           </CardItem>
-        ))}
+        </For>
         <CardItem>
           <AgreementContainer>
             <StyledCheckbox checked color={COLOR.SECONDARY} />
