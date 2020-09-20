@@ -185,6 +185,7 @@ Array [
                   "top": 1.5,
                 }
               }
+              testID="signup_input_name"
               underlineColorAndroid="rgba(0,0,0,0)"
               value=""
             />
@@ -280,6 +281,7 @@ Array [
                   "top": 1.5,
                 }
               }
+              testID="signup_input_email"
               underlineColorAndroid="rgba(0,0,0,0)"
               value=""
             />
@@ -363,7 +365,7 @@ Array [
               placeholder="Password"
               placeholderTextColor="#575757"
               rejectResponderTermination={true}
-              secureTextEntry={false}
+              secureTextEntry={true}
               style={
                 Object {
                   "color": "#000",
@@ -375,6 +377,7 @@ Array [
                   "top": 1.5,
                 }
               }
+              testID="signup_input_password"
               underlineColorAndroid="rgba(0,0,0,0)"
               value=""
             />
@@ -409,7 +412,7 @@ Array [
         >
           <View
             accessible={true}
-            focusable={false}
+            focusable={true}
             forwardedRef={[Function]}
             onClick={[Function]}
             onResponderGrant={[Function]}
@@ -420,7 +423,7 @@ Array [
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#feda68",
+                "backgroundColor": "transparent",
                 "borderBottomWidth": 1,
                 "borderColor": "#feda68",
                 "borderLeftWidth": 1,
@@ -437,6 +440,7 @@ Array [
                 "width": 20,
               }
             }
+            testID="signup_terms"
           >
             <Text
               allowFontScaling={false}
@@ -447,7 +451,7 @@ Array [
                     "fontSize": 12,
                   },
                   Object {
-                    "color": "#fff",
+                    "color": "transparent",
                     "fontSize": 25.555555555555554,
                     "lineHeight": 21,
                     "marginTop": undefined,
@@ -496,7 +500,7 @@ Array [
       >
         <View
           accessible={true}
-          focusable={false}
+          focusable={true}
           forwardedRef={[Function]}
           onClick={[Function]}
           onResponderGrant={[Function]}
@@ -534,6 +538,7 @@ Array [
               "shadowRadius": undefined,
             }
           }
+          testID="signup_submit"
         >
           <Text
             style={
