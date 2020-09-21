@@ -8,6 +8,8 @@ import Signup from './index';
 jest.mock('../../helper/validateFields');
 
 describe('Signup', () => {
+  const mockNavigation = { navigate: jest.fn() };
+
   beforeEach(() => {
     Alert.alert = jest.fn();
   });
@@ -103,7 +105,7 @@ describe('Signup', () => {
       password: '',
     }));
 
-    const { getByTestId } = render(<Signup />);
+    const { getByTestId } = render(<Signup navigation={mockNavigation} />);
 
     act(() => {
       fireEvent.changeText(getByTestId('signup_input_name'), 'Praveen');
@@ -121,6 +123,7 @@ describe('Signup', () => {
       fireEvent.press(getByTestId('signup_submit'));
     });
 
-    expect(Alert.alert).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('HOME');
   });
 });

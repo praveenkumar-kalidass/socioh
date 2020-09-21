@@ -4,8 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { Background1 } from '../component/Background';
 import { ROUTE, COLOR, CONSTANT } from '../constant';
-import Signup from '../screen/Signup';
+import Home from '../screen/Home';
 import Login from '../screen/Login';
+import Signup from '../screen/Signup';
 
 const Stack = createStackNavigator();
 
@@ -25,5 +26,6 @@ export default () => (
         cardOverlay: () => Platform.OS === CONSTANT.ANDROID && <Background1 />,
       }}
     />
+    <Stack.Screen name={ROUTE.HOME} component={Home} />
   </Stack.Navigator>
 );

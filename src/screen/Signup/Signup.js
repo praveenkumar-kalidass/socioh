@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Card, CardItem, Input, Text } from 'native-base';
-import { Alert } from 'react-native';
 
-import { COLOR, TRANSLATION, CONSTANT } from '../../constant';
+import { COLOR, TRANSLATION, CONSTANT, ROUTE } from '../../constant';
 import wrapPattern from '../../helper/wrapPattern';
 import validateFields from '../../helper/validateFields';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signup.schema';
@@ -18,7 +18,7 @@ import {
   AgreementContainer,
 } from './Signup.style';
 
-const Signup = () => {
+const Signup = ({ navigation }) => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
@@ -42,7 +42,7 @@ const Signup = () => {
       isTermsAgreed &&
       Object.values(errorMessages).every((value) => !value)
     ) {
-      Alert.alert('SUCCESS');
+      navigation.navigate(ROUTE.HOME);
     }
   };
 
@@ -96,6 +96,12 @@ const Signup = () => {
       </Card>
     </SignupContainer>
   );
+};
+
+Signup.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 };
 
 export default wrapPattern({ Component: Signup });

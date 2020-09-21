@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Background1 } from '../component/Background';
 
-const wrapPattern = ({ Component }) => () => (
+const wrapPattern = ({ Component }) => (props) => (
   <>
     <Background1 />
-    <Component />
+    <Component {...props} />
   </>
 );
 
