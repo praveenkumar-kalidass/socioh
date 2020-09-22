@@ -15,6 +15,7 @@
     "@react-navigation/material-bottom-tabs": "^5.2.16",
     "@react-navigation/native": "^5.7.3",
     "@react-navigation/stack": "^5.9.0",
+    "@testing-library/react-hooks": "^3.4.1",
     "babel-plugin-jsx-control-statements": "^4.1.0",
     "eslint-plugin-jsx-control-statements": "^2.2.1",
     "joi": "^17.2.1",
