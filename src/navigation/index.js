@@ -15,7 +15,7 @@ export default () => (
     initialRouteName={ROUTE.LOGIN}
     headerMode="none"
     screenOptions={{
-      backgroundColor: COLOR.BACKGROUND,
+      cardStyle: { backgroundColor: COLOR.BACKGROUND },
     }}>
     <Stack.Screen name={ROUTE.LOGIN} component={Login} />
     <Stack.Screen

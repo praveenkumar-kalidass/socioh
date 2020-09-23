@@ -5,6 +5,7 @@ import { Card, CardItem, Input, Text } from 'native-base';
 import { COLOR, TRANSLATION, CONSTANT, ROUTE } from '../../constant';
 import wrapPattern from '../../helper/wrapPattern';
 import validateFields from '../../helper/validateFields';
+import useService from '../../hook/useService';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signup.schema';
 import {
   SignupContainer,
@@ -24,6 +25,8 @@ const Signup = ({ navigation }) => {
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const [isTermsError, setIsTermsError] = useState(false);
 
+  const { signUp } = useService();
+
   const handleFieldChange = (label, value) => {
     setFields({
       ...fields,
@@ -42,7 +45,16 @@ const Signup = ({ navigation }) => {
       isTermsAgreed &&
       Object.values(errorMessages).every((value) => !value)
     ) {
+      handleSignup();
+    }
+  };
+
+  const handleSignup = async () => {
+    try {
+      await signUp();
       navigation.navigate(ROUTE.HOME);
+    } catch (error) {
+      console.warn('Error:', error);
     }
   };
 

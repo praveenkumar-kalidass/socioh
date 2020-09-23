@@ -1,17 +1,21 @@
 import React from 'react';
-import { Alert } from 'react-native';
 import { render, act, fireEvent } from '@testing-library/react-native';
 
 import validateFields from '../../helper/validateFields';
+import useService from '../../hook/useService';
 import Signup from './index';
 
 jest.mock('../../helper/validateFields');
 
+jest.mock('../../hook/useService');
+
 describe('Signup', () => {
   const mockNavigation = { navigate: jest.fn() };
+  const mockSignupService = jest.fn();
 
   beforeEach(() => {
-    Alert.alert = jest.fn();
+    mockSignupService.mockResolvedValue();
+    useService.mockImplementation(() => ({ signUp: mockSignupService }));
   });
 
   afterEach(() => {
@@ -92,13 +96,13 @@ describe('Signup', () => {
       fireEvent.press(getByTestId('signup_submit'));
     });
 
-    expect(Alert.alert).toHaveBeenCalledTimes(0);
+    expect(mockSignupService).toHaveBeenCalledTimes(0);
     expect(getByTestId('signup_terms').props.style.borderColor).toStrictEqual(
       '#ff0000',
     );
   });
 
-  it('should complete signup when all field validations are passed', () => {
+  it('should complete signup when all field validations are passed', async () => {
     validateFields.mockImplementation(() => ({
       name: '',
       email: '',
@@ -119,10 +123,11 @@ describe('Signup', () => {
       fireEvent(getByTestId('signup_input_password'), 'onBlur');
       fireEvent(getByTestId('signup_terms'), 'onPress');
     });
-    act(() => {
-      fireEvent.press(getByTestId('signup_submit'));
+    await act(async () => {
+      await fireEvent.press(getByTestId('signup_submit'));
     });
 
+    expect(mockSignupService).toHaveBeenCalledTimes(1);
     expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('HOME');
   });
