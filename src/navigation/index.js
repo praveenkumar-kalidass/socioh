@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Background1 } from '../component/Background';
 import { ROUTE, COLOR, CONSTANT } from '../constant';
 import Login from '../screen/Login';
+import Signin from '../screen/Signin';
 import Signup from '../screen/Signup';
 import HomeBottomTabNavigator from './HomeBottomTabNavigator';
 
@@ -18,6 +19,14 @@ export default () => (
       cardStyle: { backgroundColor: COLOR.BACKGROUND },
     }}>
     <Stack.Screen name={ROUTE.LOGIN} component={Login} />
+    <Stack.Screen
+      name={ROUTE.SIGNIN}
+      component={Signin}
+      options={{
+        cardOverlayEnabled: true,
+        cardOverlay: () => Platform.OS === CONSTANT.ANDROID && <Background1 />,
+      }}
+    />
     <Stack.Screen
       name={ROUTE.SIGNUP}
       component={Signup}

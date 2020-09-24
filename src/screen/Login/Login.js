@@ -25,6 +25,10 @@ const Login = ({ navigation }) => {
     navigation.navigate(ROUTE.SIGNUP);
   };
 
+  const navigateToSignin = () => {
+    navigation.navigate(ROUTE.SIGNIN);
+  };
+
   return (
     <LoginContainer>
       <TitleContainer>
@@ -37,7 +41,11 @@ const Login = ({ navigation }) => {
       </IconContainer>
       <ButtonContainer>
         <SignInContainer>
-          <SignInButton rounded large>
+          <SignInButton
+            rounded
+            large
+            onPress={navigateToSignin}
+            testID="sign_in">
             <SignInButtonText>{TRANSLATION.LETS_GO}</SignInButtonText>
           </SignInButton>
         </SignInContainer>

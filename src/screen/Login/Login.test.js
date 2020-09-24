@@ -26,4 +26,13 @@ describe('Login', () => {
     expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('SIGNUP');
   });
+
+  it('should navigate on press of signin link', () => {
+    const { getByTestId } = render(<Login navigation={mockNavigation} />);
+
+    act(() => fireEvent(getByTestId('sign_in'), 'onPress'));
+
+    expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('SIGNIN');
+  });
 });
