@@ -111,23 +111,31 @@ describe('Signup', () => {
 
     const { getByTestId } = render(<Signup navigation={mockNavigation} />);
 
-    act(() => {
-      fireEvent.changeText(getByTestId('signup_input_name'), 'Praveen');
-      fireEvent(getByTestId('signup_input_name'), 'onBlur');
-      fireEvent.changeText(
+    await act(async () => {
+      await fireEvent.changeText(getByTestId('signup_input_name'), 'Praveen');
+      await fireEvent(getByTestId('signup_input_name'), 'onBlur');
+      await fireEvent.changeText(
         getByTestId('signup_input_email'),
         'praveen@github.com',
       );
-      fireEvent(getByTestId('signup_input_email'), 'onBlur');
-      fireEvent.changeText(getByTestId('signup_input_password'), '1234567890');
-      fireEvent(getByTestId('signup_input_password'), 'onBlur');
-      fireEvent(getByTestId('signup_terms'), 'onPress');
+      await fireEvent(getByTestId('signup_input_email'), 'onBlur');
+      await fireEvent.changeText(
+        getByTestId('signup_input_password'),
+        '1234567890',
+      );
+      await fireEvent(getByTestId('signup_input_password'), 'onBlur');
+      await fireEvent(getByTestId('signup_terms'), 'onPress');
     });
     await act(async () => {
       await fireEvent.press(getByTestId('signup_submit'));
     });
 
     expect(mockSignupService).toHaveBeenCalledTimes(1);
+    expect(mockSignupService).toHaveBeenCalledWith({
+      name: 'Praveen',
+      email: 'praveen@github.com',
+      password: '1234567890',
+    });
     expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('HOME');
   });

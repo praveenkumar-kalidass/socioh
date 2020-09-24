@@ -51,7 +51,7 @@ const Signup = ({ navigation }) => {
 
   const handleSignup = async () => {
     try {
-      await signUp();
+      await signUp(fields);
       navigation.navigate(ROUTE.HOME);
     } catch (error) {
       console.warn('Error:', error);
