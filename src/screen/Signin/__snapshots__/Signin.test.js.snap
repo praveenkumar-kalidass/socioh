@@ -1,59 +1,376 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Signin should match snapshot 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "position": "absolute",
-      },
-    ]
-  }
->
-  <RNSVGSvgView
-    bbHeight={1334}
-    bbWidth={750}
-    focusable={false}
-    height={1334}
+Array [
+  <View
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
-        },
-        Object {
-          "flex": 0,
-          "height": 1334,
-          "width": 750,
+          "position": "absolute",
         },
       ]
     }
-    width={750}
   >
-    <RNSVGGroup>
-      <RNSVGCircle
-        cx={83.75}
-        cy={333.5}
-        fill={4279943103}
-        propList={
-          Array [
-            "fill",
-          ]
+    <RNSVGSvgView
+      bbHeight={1334}
+      bbWidth={750}
+      focusable={false}
+      height={1334}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 1334,
+            "width": 750,
+          },
+        ]
+      }
+      width={750}
+    >
+      <RNSVGGroup>
+        <RNSVGCircle
+          cx={83.75}
+          cy={333.5}
+          fill={4279943103}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          r={93.75}
+        />
+        <RNSVGCircle
+          cx={666.25}
+          cy={1187.25}
+          fill={4294892136}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          r={166.75}
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderBottomWidth": 0.5,
+          "borderColor": "#ccc",
+          "borderLeftWidth": 0.5,
+          "borderRadius": 2,
+          "borderRightWidth": 0.5,
+          "borderTopWidth": 0.5,
+          "elevation": 3,
+          "flexWrap": "nowrap",
+          "marginBottom": 5,
+          "marginLeft": 2,
+          "marginRight": 2,
+          "marginTop": 5,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 1.5,
         }
-        r={93.75}
-      />
-      <RNSVGCircle
-        cx={666.25}
-        cy={1187.25}
-        fill={4294892136}
-        propList={
-          Array [
-            "fill",
-          ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 2,
+            "flexDirection": "row",
+            "paddingBottom": 10,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 10,
+          }
         }
-        r={166.75}
-      />
-    </RNSVGGroup>
-  </RNSVGSvgView>
-</View>
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                },
+                Object {
+                  "marginBottom": 10,
+                },
+              ]
+            }
+          >
+            Your e-mail
+          </Text>
+          <View
+            accessible={true}
+            focusable={false}
+            forwardedRef={[Function]}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#f0f8f8",
+                "borderBottomWidth": 1,
+                "borderColor": "#D9D5DC",
+                "borderLeftWidth": 1,
+                "borderRadius": 5,
+                "borderRightWidth": 1,
+                "borderTopWidth": 1,
+                "borderWidth": undefined,
+                "flexDirection": "row",
+                "marginLeft": 2,
+                "opacity": 1,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              editable={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              placeholder="E-mail"
+              placeholderTextColor="#575757"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 1,
+                  "fontSize": 17,
+                  "height": 50,
+                  "paddingLeft": 8,
+                  "paddingRight": 5,
+                  "top": 1.5,
+                }
+              }
+              testID="signin_input_email"
+              underlineColorAndroid="rgba(0,0,0,0)"
+              value=""
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 2,
+            "flexDirection": "row",
+            "paddingBottom": 10,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                },
+                Object {
+                  "marginBottom": 10,
+                },
+              ]
+            }
+          >
+            Your password
+          </Text>
+          <View
+            accessible={true}
+            focusable={false}
+            forwardedRef={[Function]}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#f0f8f8",
+                "borderBottomWidth": 1,
+                "borderColor": "#D9D5DC",
+                "borderLeftWidth": 1,
+                "borderRadius": 5,
+                "borderRightWidth": 1,
+                "borderTopWidth": 1,
+                "borderWidth": undefined,
+                "flexDirection": "row",
+                "marginLeft": 2,
+                "opacity": 1,
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              editable={true}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              placeholder="Password"
+              placeholderTextColor="#575757"
+              rejectResponderTermination={true}
+              secureTextEntry={true}
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 1,
+                  "fontSize": 17,
+                  "height": 50,
+                  "paddingLeft": 8,
+                  "paddingRight": 5,
+                  "top": 1.5,
+                }
+              }
+              testID="signin_input_password"
+              underlineColorAndroid="rgba(0,0,0,0)"
+              value=""
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        footer={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderBottomWidth": null,
+            "borderRadius": 2,
+            "flexDirection": "row",
+            "paddingBottom": 10,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={false}
+          forwardedRef={[Function]}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#feda68",
+              "borderBottomWidth": null,
+              "borderColor": "#007aff",
+              "borderLeftWidth": null,
+              "borderRadius": 57,
+              "borderRightWidth": null,
+              "borderTopWidth": null,
+              "borderWidth": undefined,
+              "elevation": 2,
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "height": 60,
+              "justifyContent": "center",
+              "marginHorizontal": 10,
+              "opacity": 1,
+              "paddingBottom": 6,
+              "paddingTop": 6,
+              "shadowColor": undefined,
+              "shadowOffset": undefined,
+              "shadowOpacity": undefined,
+              "shadowRadius": undefined,
+            }
+          }
+          testID="signin_submit"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#fff",
+                  "fontFamily": "System",
+                  "fontSize": 22,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "paddingLeft": 16,
+                  "paddingRight": 16,
+                },
+                Object {
+                  "color": "#000000",
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            Sign in
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
 `;

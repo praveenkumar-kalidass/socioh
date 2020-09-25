@@ -10,4 +10,6 @@ export default {
   PASSWORD: 'Password',
   TERMS_AND_CONDITIONS: 'I agree with terms & conditions',
   SIGN_UP: 'Sign up',
+  YOUR_PASSWORD: 'Your password',
+  SIGN_IN: 'Sign in',
 };
