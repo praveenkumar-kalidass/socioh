@@ -1,25 +1,18 @@
 const validateFields = (schema, state, initialState, isSubmit = false) => {
   const { error } = schema.validate(state, { abortEarly: false });
   if (error?.details) {
-    return error.details.reduce(
-      (result, item) => {
-        if (isSubmit || state[item.context.key]) {
-          return {
-            ...result,
-            [item.context.key]: item.message,
-          };
-        }
+    return error.details.reduce((result, item) => {
+      if (isSubmit || state[item.context.key]) {
         return {
           ...result,
-          [item.context.key]: '',
+          [item.context.key]: item.message,
         };
-      },
-      {
-        name: '',
-        email: '',
-        password: '',
-      },
-    );
+      }
+      return {
+        ...result,
+        [item.context.key]: '',
+      };
+    }, initialState);
   }
   return initialState;
 };
