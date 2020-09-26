@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { Card, CardItem, Input } from 'native-base';
 
-import { TRANSLATION, CONSTANT } from '../../constant';
+import { TRANSLATION, CONSTANT, ROUTE } from '../../constant';
 import wrapPattern from '../../helper/wrapPattern';
 import validateFields from '../../helper/validateFields';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signin.schema';
@@ -15,9 +16,10 @@ import {
   InputContainer,
 } from './Signin.style';
 
-const Signin = () => {
+const Signin = ({ navigation }) => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -29,6 +31,19 @@ const Signin = () => {
   const handleValidation = () => {
     setErrorMessages(validateFields(SCHEMA, fields, INITIAL_STATE));
   };
+
+  const handleSubmit = () => {
+    setErrorMessages(validateFields(SCHEMA, fields, INITIAL_STATE, true));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    if (isSubmit && Object.values(errorMessages).every((value) => !value)) {
+      navigation.navigate(ROUTE.HOME);
+    } else {
+      setIsSubmit(false);
+    }
+  }, [navigation, isSubmit, errorMessages]);
 
   return (
     <SigninContainer>
@@ -56,13 +71,23 @@ const Signin = () => {
           </CardItem>
         </For>
         <CardItem footer>
-          <SigninButton testID="signin_submit" rounded large>
+          <SigninButton
+            testID="signin_submit"
+            rounded
+            large
+            onPress={handleSubmit}>
             <SigninButtonText>{TRANSLATION.SIGN_IN}</SigninButtonText>
           </SigninButton>
         </CardItem>
       </Card>
     </SigninContainer>
   );
+};
+
+Signin.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 };
 
 export default wrapPattern({ Component: Signin });

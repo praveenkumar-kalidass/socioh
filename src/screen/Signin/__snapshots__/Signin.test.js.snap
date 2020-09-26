@@ -306,7 +306,7 @@ Array [
       >
         <View
           accessible={true}
-          focusable={false}
+          focusable={true}
           forwardedRef={[Function]}
           onClick={[Function]}
           onResponderGrant={[Function]}

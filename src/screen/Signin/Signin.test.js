@@ -7,6 +7,8 @@ import Signin from './index';
 jest.mock('../../helper/validateFields');
 
 describe('Signin', () => {
+  const mockNavigation = { navigate: jest.fn() };
+
   it('should match snapshot', () => {
     const container = render(<Signin />);
 
@@ -58,5 +60,33 @@ describe('Signin', () => {
     expect(getByTestId('signin_error_email').props.children).toStrictEqual(
       'email is not valid',
     );
+  });
+
+  it('should complete signup when all field validations are passed', async () => {
+    validateFields.mockImplementation(() => ({
+      email: '',
+      password: '',
+    }));
+
+    const { getByTestId } = render(<Signin navigation={mockNavigation} />);
+
+    await act(async () => {
+      await fireEvent.changeText(
+        getByTestId('signin_input_email'),
+        'praveen@github.com',
+      );
+      await fireEvent(getByTestId('signin_input_email'), 'onBlur');
+      await fireEvent.changeText(
+        getByTestId('signin_input_password'),
+        '1234567890',
+      );
+      await fireEvent(getByTestId('signin_input_password'), 'onBlur');
+    });
+    await act(async () => {
+      await fireEvent.press(getByTestId('signin_submit'));
+    });
+
+    expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('HOME');
   });
 });
