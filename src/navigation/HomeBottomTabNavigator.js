@@ -1,13 +1,22 @@
 import React from 'react';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { ROUTE } from '../constant';
+import { ROUTE, ICON } from '../constant';
 import Home from '../screen/Home';
+import { TabIcon } from './HomeBottomTabNavigator.style';
 
-const HomeBottomTab = createMaterialBottomTabNavigator();
+const HomeBottomTab = createBottomTabNavigator();
 
 export default () => (
-  <HomeBottomTab.Navigator>
-    <HomeBottomTab.Screen name={ROUTE.HOME} component={Home} />
+  <HomeBottomTab.Navigator tabBarOptions={{ showLabel: false }}>
+    <HomeBottomTab.Screen
+      name={ROUTE.HOME}
+      component={Home}
+      options={{
+        tabBarIcon: () => (
+          <TabIcon type={ICON.MATERIAL_FAMILY} name={ICON.HOME} />
+        ),
+      }}
+    />
   </HomeBottomTab.Navigator>
 );
