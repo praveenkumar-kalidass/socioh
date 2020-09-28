@@ -1,4 +1,5 @@
 export default {
+  SPACE_0: '0px',
   SPACE_5: '5px',
   SPACE_10: '10px',
   SPACE_20: '20px',
