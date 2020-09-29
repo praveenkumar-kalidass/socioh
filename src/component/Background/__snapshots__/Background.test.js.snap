@@ -57,3 +57,72 @@ exports[`Background Background1 should match snapshot 1`] = `
   </RNSVGSvgView>
 </View>
 `;
+
+exports[`Background Background2 should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    bbHeight={1334}
+    bbWidth={750}
+    focusable={false}
+    height={1334}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": 1334,
+          "width": 750,
+        },
+      ]
+    }
+    width={750}
+  >
+    <RNSVGGroup>
+      <RNSVGCircle
+        cx={666.25}
+        cy={333.5}
+        fill={4294892136}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        r={125}
+      />
+      <RNSVGCircle
+        cx={83.75}
+        cy={762.2857142857143}
+        fill={4279943103}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        r={93.75}
+      />
+      <RNSVGCircle
+        cx={650}
+        cy={1190.6000000000001}
+        fill={4279943103}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        r={75}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;
