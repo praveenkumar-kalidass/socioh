@@ -16,3 +16,8 @@ jobs:
           node-version: '10.x'
       - run: yarn install
       - run: yarn test
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: coverage/lcov-report/index.html
