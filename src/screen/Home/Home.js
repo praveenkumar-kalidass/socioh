@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Thumbnail } from 'native-base';
 
 import User from '../../asset/image/user.png';
@@ -12,13 +13,17 @@ import {
   NavigationLabel,
   NavigationIcon,
 } from './Home.style';
-import { ICON } from '../../constant';
+import { ICON, ROUTE } from '../../constant';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const navigateToProfile = () => {
+    navigation.navigate(ROUTE.PROFILE);
+  };
+
   return (
     <HomeContainer>
       <HomeLayout>
-        <AvatarContainer>
+        <AvatarContainer testID="home_avatar" onPress={navigateToProfile}>
           <Thumbnail large source={User} />
           <AvatarLabel bold>Sample Text</AvatarLabel>
         </AvatarContainer>
@@ -31,6 +36,12 @@ const Home = () => {
       </HomeLayout>
     </HomeContainer>
   );
+};
+
+Home.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 };
 
 export default Home;

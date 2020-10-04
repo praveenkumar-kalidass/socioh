@@ -16,7 +16,7 @@ export const HomeLayout = styled.View`
   margin-top: 30%;
 `;
 
-export const AvatarContainer = styled.View`
+export const AvatarContainer = styled.TouchableOpacity`
   align-items: center;
   padding-vertical: ${SPACING.SPACE_20};
 `;

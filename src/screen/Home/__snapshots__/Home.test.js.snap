@@ -29,14 +29,23 @@ exports[`Home should match snapshot 1`] = `
     }
   >
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "paddingVertical": 20,
-          },
-        ]
+        Object {
+          "alignItems": "center",
+          "opacity": 1,
+          "paddingVertical": 20,
+        }
       }
+      testID="home_avatar"
     >
       <Image
         large={true}
