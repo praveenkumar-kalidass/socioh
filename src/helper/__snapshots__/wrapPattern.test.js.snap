@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`wrapPattern should wrap with default pattern, when no pattern is specified 1`] = `[Function]`;
+
+exports[`wrapPattern should wrap with specific pattern, when pattern is specified 1`] = `[Function]`;
