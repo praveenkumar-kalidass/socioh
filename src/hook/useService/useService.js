@@ -8,6 +8,7 @@ const useService = () => {
   const { ajax } = useAjax();
 
   const signUp = async ({ name, email, password }) => {
+    await Keychain.resetGenericPassword();
     await Keychain.setGenericPassword(email, password);
     await AsyncStorage.setItem(
       CONSTANT.ASYNC_STORAGE_KEY.SOCIOH_USER,
@@ -19,7 +20,15 @@ const useService = () => {
     return ajax();
   };
 
-  return { signUp };
+  const signIn = async ({ email, password }) => {
+    const credentials = await Keychain.getGenericPassword();
+    if (credentials.username === email && credentials.password === password) {
+      return ajax();
+    }
+    throw Error();
+  };
+
+  return { signUp, signIn };
 };
 
 export default useService;
