@@ -12,5 +12,6 @@ module.exports = {
   plugins: ['jsx-control-statements'],
   rules: {
     'react/jsx-no-undef': [2, { allowGlobals: true }],
+    'react-hooks/exhaustive-deps': 'off',
   },
 };
