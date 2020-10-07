@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardItem, Input } from 'native-base';
 
 import { TRANSLATION, CONSTANT, ROUTE } from '../../constant';
 import wrapPattern from '../../helper/wrapPattern';
 import validateFields from '../../helper/validateFields';
+import useService from '../../hook/useService';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signin.schema';
 import {
   SigninContainer,
@@ -20,6 +21,8 @@ const Signin = ({ navigation }) => {
   const [fields, setFields] = useState(INITIAL_STATE);
   const [errorMessages, setErrorMessages] = useState(INITIAL_STATE);
   const [isSubmit, setIsSubmit] = useState(false);
+
+  const { signIn } = useService();
 
   const handleFieldChange = (label, value) => {
     setFields({
@@ -37,9 +40,18 @@ const Signin = ({ navigation }) => {
     setIsSubmit(true);
   };
 
+  const handleSignin = useCallback(async () => {
+    try {
+      await signIn(fields);
+      navigation.navigate(ROUTE.HOME);
+    } catch (error) {
+      console.warn('Error:', error);
+    }
+  }, [fields]);
+
   useEffect(() => {
     if (isSubmit && Object.values(errorMessages).every((value) => !value)) {
-      navigation.navigate(ROUTE.HOME);
+      handleSignin();
     } else {
       setIsSubmit(false);
     }

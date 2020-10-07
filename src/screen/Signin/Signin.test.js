@@ -2,12 +2,25 @@ import React from 'react';
 import { render, fireEvent, act } from '@testing-library/react-native';
 
 import validateFields from '../../helper/validateFields';
+import useService from '../../hook/useService';
 import Signin from './index';
 
 jest.mock('../../helper/validateFields');
 
+jest.mock('../../hook/useService');
+
 describe('Signin', () => {
   const mockNavigation = { navigate: jest.fn() };
+  const mockSigninService = jest.fn();
+
+  beforeEach(() => {
+    mockSigninService.mockResolvedValue();
+    useService.mockImplementation(() => ({ signIn: mockSigninService }));
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('should match snapshot', () => {
     const container = render(<Signin />);
@@ -84,6 +97,12 @@ describe('Signin', () => {
     });
     await act(async () => {
       await fireEvent.press(getByTestId('signin_submit'));
+    });
+
+    expect(mockSigninService).toHaveBeenCalledTimes(1);
+    expect(mockSigninService).toHaveBeenCalledWith({
+      email: 'praveen@github.com',
+      password: '1234567890',
     });
 
     expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
