@@ -128,7 +128,7 @@ describe('useService', () => {
           email: 'praveen@github.com',
           password: '1234567890',
         }),
-      ).rejects.toEqual(Error());
+      ).rejects.toEqual(Error('INVALID_CREDENTIALS'));
     });
   });
 });

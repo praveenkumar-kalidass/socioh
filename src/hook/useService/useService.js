@@ -1,7 +1,7 @@
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
 
-import { CONSTANT } from '../../constant';
+import { CONSTANT, ERROR } from '../../constant';
 import useAjax from '../useAjax';
 
 const useService = () => {
@@ -25,7 +25,7 @@ const useService = () => {
     if (credentials.username === email && credentials.password === password) {
       return ajax();
     }
-    throw Error();
+    throw Error(ERROR.INVALID_CREDENTIALS);
   };
 
   return { signUp, signIn };
