@@ -3,17 +3,23 @@ import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import useAjax from '../useAjax';
+import useUser from '../useUser';
 import useService from './index';
 
 const ajaxMock = {
   ajax: jest.fn(),
 };
+const userMock = {
+  saveUserDetails: jest.fn(),
+};
 
 jest.mock('../useAjax');
+jest.mock('../useUser');
 
 describe('useService', () => {
   beforeEach(() => {
     useAjax.mockImplementation(() => ajaxMock);
+    useUser.mockImplementation(() => userMock);
   });
 
   afterEach(() => {
@@ -54,7 +60,7 @@ describe('useService', () => {
       );
     });
 
-    it('should store user info in local storage, when signup is called', async () => {
+    it('should store user info in local storage and user context, when signup is called', async () => {
       const { result } = renderHook(() => useService());
 
       await act(async () => {
@@ -75,6 +81,11 @@ describe('useService', () => {
         'SOCIOH_USER',
         expectedValue,
       );
+      expect(userMock.saveUserDetails).toHaveBeenCalledTimes(1);
+      expect(userMock.saveUserDetails).toHaveBeenCalledWith({
+        name: 'Praveen',
+        email: 'praveen@github.com',
+      });
     });
   });
 
@@ -95,6 +106,34 @@ describe('useService', () => {
       });
 
       expect(Keychain.getGenericPassword).toHaveBeenCalledTimes(1);
+    });
+
+    it('should get user details and save in user context, when credentials match', async () => {
+      Keychain.getGenericPassword.mockResolvedValueOnce({
+        username: 'praveen@github.com',
+        password: '1234567890',
+      });
+      AsyncStorage.getItem.mockResolvedValueOnce(
+        JSON.stringify({
+          email: 'praveen@github.com',
+          name: 'Praveen',
+        }),
+      );
+
+      const { result } = renderHook(() => useService());
+
+      await act(async () => {
+        await result.current.signIn({
+          email: 'praveen@github.com',
+          password: '1234567890',
+        });
+      });
+
+      expect(userMock.saveUserDetails).toHaveBeenCalledTimes(1);
+      expect(userMock.saveUserDetails).toHaveBeenCalledWith({
+        name: 'Praveen',
+        email: 'praveen@github.com',
+      });
     });
 
     it('should make a call to ajax, when credentials match', async () => {
