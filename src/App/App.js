@@ -5,11 +5,14 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Navigation from '../navigation';
 import { LoaderProvider } from '../hook/useLoader';
+import { UserProvider } from '../hook/useUser';
 
 export default () => (
   <NavigationContainer>
-    <LoaderProvider>
-      <Navigation />
-    </LoaderProvider>
+    <UserProvider>
+      <LoaderProvider>
+        <Navigation />
+      </LoaderProvider>
+    </UserProvider>
   </NavigationContainer>
 );

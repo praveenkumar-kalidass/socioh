@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Thumbnail } from 'native-base';
 
 import User from '../../asset/image/user.png';
+import useUser from '../../hook/useUser';
+import { ICON, ROUTE } from '../../constant';
 import {
   AvatarContainer,
   AvatarLabel,
@@ -13,9 +15,10 @@ import {
   NavigationLabel,
   NavigationIcon,
 } from './Home.style';
-import { ICON, ROUTE } from '../../constant';
 
 const Home = ({ navigation }) => {
+  const { user } = useUser();
+
   const navigateToProfile = () => {
     navigation.navigate(ROUTE.PROFILE);
   };
@@ -25,7 +28,7 @@ const Home = ({ navigation }) => {
       <HomeLayout>
         <AvatarContainer testID="home_avatar" onPress={navigateToProfile}>
           <Thumbnail large source={User} />
-          <AvatarLabel bold>Sample Text</AvatarLabel>
+          <AvatarLabel bold>{user.name}</AvatarLabel>
         </AvatarContainer>
         <UserNavigationList>
           <UserNavigationItem>

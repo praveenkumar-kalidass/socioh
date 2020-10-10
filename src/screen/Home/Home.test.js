@@ -1,10 +1,21 @@
 import React from 'react';
 import { render, act, fireEvent } from '@testing-library/react-native';
 
+import useUser from '../../hook/useUser';
 import Home from './index';
+
+jest.mock('../../hook/useUser');
 
 describe('Home', () => {
   const mockNavigation = { navigate: jest.fn() };
+
+  beforeEach(() => {
+    useUser.mockImplementation(() => ({ user: { name: 'Praveen' } }));
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('should match snapshot', () => {
     const container = render(<Home />);
