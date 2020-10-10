@@ -4,6 +4,6 @@ import { Icon } from 'native-base';
 import { COLOR, FONT } from '../constant';
 
 export const TabIcon = styled(Icon)`
-  color: ${COLOR.PRIMARY};
+  color: ${({ active }) => (active ? COLOR.PRIMARY : COLOR.PALE_GREEN)};
   font-size: ${FONT.SIZE_50};
 `;
