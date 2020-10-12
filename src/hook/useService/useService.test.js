@@ -11,6 +11,7 @@ const ajaxMock = {
 };
 const userMock = {
   saveUserDetails: jest.fn(),
+  clearUserDetails: jest.fn(),
 };
 
 jest.mock('../useAjax');
@@ -168,6 +169,19 @@ describe('useService', () => {
           password: '1234567890',
         }),
       ).rejects.toEqual(Error('INVALID_CREDENTIALS'));
+    });
+  });
+
+  describe('logout', () => {
+    it('should clear user credential, when logout is called', async () => {
+      const { result } = renderHook(() => useService());
+
+      await act(async () => {
+        await result.current.logout();
+      });
+
+      expect(userMock.clearUserDetails).toHaveBeenCalledTimes(1);
+      expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
     });
   });
 });

@@ -7,7 +7,7 @@ import useUser from '../useUser';
 
 const useService = () => {
   const { ajax } = useAjax();
-  const { saveUserDetails } = useUser();
+  const { saveUserDetails, clearUserDetails } = useUser();
 
   const signUp = async ({ name, email, password }) => {
     await Keychain.resetGenericPassword();
@@ -38,7 +38,12 @@ const useService = () => {
     throw Error(ERROR.INVALID_CREDENTIALS);
   };
 
-  return { signUp, signIn };
+  const logout = async () => {
+    clearUserDetails();
+    return ajax();
+  };
+
+  return { signUp, signIn, logout };
 };
 
 export default useService;
