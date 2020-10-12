@@ -23,4 +23,16 @@ describe('useUser', () => {
 
     expect(result.current.user).toStrictEqual({ name: 'Praveen' });
   });
+
+  it('should clear user details', () => {
+    const { result } = renderHook(() => useUser(), {
+      wrapper: UserProvider,
+    });
+
+    act(() => {
+      result.current.clearUserDetails();
+    });
+
+    expect(result.current.user).toBeNull();
+  });
 });

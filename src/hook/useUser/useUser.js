@@ -7,8 +7,11 @@ const useUser = () => {
 
   const saveUserDetails = (details) => setUser(details);
 
+  const clearUserDetails = () => setUser(null);
+
   return {
     user,
+    clearUserDetails,
     saveUserDetails,
   };
 };
