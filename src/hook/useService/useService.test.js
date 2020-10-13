@@ -10,6 +10,7 @@ const ajaxMock = {
   ajax: jest.fn(),
 };
 const userMock = {
+  user: { name: 'Praveen' },
   saveUserDetails: jest.fn(),
   clearUserDetails: jest.fn(),
 };
@@ -181,6 +182,20 @@ describe('useService', () => {
       });
 
       expect(userMock.clearUserDetails).toHaveBeenCalledTimes(1);
+      expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('getUserDetails', () => {
+    it('should return the user details, when called', async () => {
+      const { result } = renderHook(() => useService());
+      let userDetails;
+
+      await act(async () => {
+        userDetails = await result.current.getUserDetails();
+      });
+
+      expect(userDetails).toStrictEqual({ name: 'Praveen' });
       expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
     });
   });

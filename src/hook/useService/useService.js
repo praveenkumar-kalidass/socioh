@@ -7,7 +7,7 @@ import useUser from '../useUser';
 
 const useService = () => {
   const { ajax } = useAjax();
-  const { saveUserDetails, clearUserDetails } = useUser();
+  const { user, saveUserDetails, clearUserDetails } = useUser();
 
   const signUp = async ({ name, email, password }) => {
     await Keychain.resetGenericPassword();
@@ -43,7 +43,15 @@ const useService = () => {
     return ajax();
   };
 
-  return { signUp, signIn, logout };
+  const getUserDetails = async () => {
+    if (user) {
+      await ajax();
+      return user;
+    }
+    throw Error(ERROR.NO_USER_FOUND);
+  };
+
+  return { signUp, signIn, logout, getUserDetails };
 };
 
 export default useService;
