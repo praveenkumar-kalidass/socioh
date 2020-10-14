@@ -3,4 +3,5 @@ export default {
   CHAT: 'chat',
   HOME: 'home',
   STAR: 'star',
+  LOCK: 'lock-outline',
 };

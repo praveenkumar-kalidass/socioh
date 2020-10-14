@@ -30,16 +30,18 @@ export const AvatarLabel = styled(Text)`
 export const UserNavigationList = styled(List)``;
 
 export const UserNavigationItem = styled(ListItem)`
+  ${({ selected }) =>
+    selected ? `background-color: ${COLOR.PALE_GREEN};` : ''}
   margin-left: ${SPACING.SPACE_0};
   padding-left: ${SPACING.SPACE_20};
 `;
 
 export const NavigationIcon = styled(Icon)`
-  color: ${COLOR.WHITE};
+  color: ${({ selected }) => (selected ? COLOR.BLACK : COLOR.WHITE)};
 `;
 
 export const NavigationLabel = styled(Text)`
-  color: ${COLOR.WHITE};
+  color: ${({ selected }) => (selected ? COLOR.BLACK : COLOR.WHITE)};
   font-size: ${FONT.SIZE_16};
   font-weight: bold;
   margin-left: ${SPACING.SPACE_20};

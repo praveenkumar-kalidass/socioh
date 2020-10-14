@@ -62,25 +62,6 @@ exports[`Home should match snapshot 1`] = `
           }
         }
       />
-      <Text
-        bold={true}
-        style={
-          Array [
-            Object {
-              "color": "#000",
-              "fontFamily": "System",
-              "fontSize": 16,
-            },
-            Object {
-              "color": "#ffffff",
-              "fontSize": 24,
-              "marginTop": 10,
-            },
-          ]
-        }
-      >
-        Praveen
-      </Text>
     </View>
     <View
       style={
@@ -102,6 +83,101 @@ exports[`Home should match snapshot 1`] = `
         onStartShouldSetResponder={[Function]}
       >
         <View
+          selected={true}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              },
+              Object {
+                "backgroundColor": "#b0e6e7",
+                "marginLeft": 0,
+                "paddingLeft": 20,
+              },
+            ]
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            selected={true}
+            style={
+              Array [
+                Object {
+                  "color": undefined,
+                  "fontSize": 12,
+                },
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontSize": 30,
+                  },
+                  Object {
+                    "color": "#007aff",
+                    "fontSize": 30,
+                  },
+                  Object {
+                    "color": "#000000",
+                  },
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+            type="MaterialIcons"
+          >
+            
+          </Text>
+          <Text
+            selected={true}
+            style={
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#007aff",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                },
+                Object {
+                  "color": "#000000",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "marginLeft": 20,
+                  "textTransform": "uppercase",
+                },
+              ]
+            }
+          >
+            Home
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        testID="home_logout"
+      >
+        <View
+          button={true}
+          onPress={[Function]}
           style={
             Array [
               Object {
@@ -153,7 +229,7 @@ exports[`Home should match snapshot 1`] = `
             }
             type="MaterialIcons"
           >
-            
+            
           </Text>
           <Text
             style={
@@ -174,7 +250,7 @@ exports[`Home should match snapshot 1`] = `
               ]
             }
           >
-            Home
+            Logout
           </Text>
         </View>
       </View>

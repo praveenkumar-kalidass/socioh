@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Thumbnail } from 'native-base';
 
-import User from '../../asset/image/user.png';
-import useUser from '../../hook/useUser';
-import { ICON, ROUTE } from '../../constant';
+import UserAvatar from '../../asset/image/user.png';
+import useService from '../../hook/useService';
+import { ICON, ROUTE, TRANSLATION } from '../../constant';
 import {
   AvatarContainer,
   AvatarLabel,
@@ -17,23 +17,60 @@ import {
 } from './Home.style';
 
 const Home = ({ navigation }) => {
-  const { user } = useUser();
+  const [user, setUser] = useState(null);
+  const { logout, getUserDetails } = useService();
 
   const navigateToProfile = () => {
     navigation.navigate(ROUTE.PROFILE);
   };
 
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigation.navigate(ROUTE.LOGIN);
+    } catch (error) {
+      console.warn('Error:', error);
+    }
+  };
+
+  useEffect(() => {
+    const loadUserDetails = async () => {
+      try {
+        const data = await getUserDetails();
+        setUser(data);
+      } catch (error) {
+        console.warn('Error:', error);
+      }
+    };
+    loadUserDetails();
+  }, []);
+
   return (
     <HomeContainer>
       <HomeLayout>
         <AvatarContainer testID="home_avatar" onPress={navigateToProfile}>
-          <Thumbnail large source={User} />
-          <AvatarLabel bold>{user.name}</AvatarLabel>
+          <Thumbnail large source={UserAvatar} />
+          <If condition={Boolean(user)}>
+            <AvatarLabel testID="home_user_name" bold>
+              {user.name}
+            </AvatarLabel>
+          </If>
         </AvatarContainer>
         <UserNavigationList>
-          <UserNavigationItem>
-            <NavigationIcon type={ICON.MATERIAL_FAMILY} name={ICON.HOME} />
-            <NavigationLabel>Home</NavigationLabel>
+          <UserNavigationItem selected>
+            <NavigationIcon
+              selected
+              type={ICON.MATERIAL_FAMILY}
+              name={ICON.HOME}
+            />
+            <NavigationLabel selected>{TRANSLATION.HOME}</NavigationLabel>
+          </UserNavigationItem>
+          <UserNavigationItem
+            onPress={handleLogout}
+            testID="home_logout"
+            button>
+            <NavigationIcon type={ICON.MATERIAL_FAMILY} name={ICON.LOCK} />
+            <NavigationLabel>{TRANSLATION.LOGOUT}</NavigationLabel>
           </UserNavigationItem>
         </UserNavigationList>
       </HomeLayout>
