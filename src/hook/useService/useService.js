@@ -1,7 +1,7 @@
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
 
-import { CONSTANT, ERROR } from '../../constant';
+import { CONSTANT, ERROR, TRANSLATION } from '../../constant';
 import useAjax from '../useAjax';
 import useUser from '../useUser';
 
@@ -46,7 +46,10 @@ const useService = () => {
   const getUserDetails = async () => {
     if (user) {
       await ajax();
-      return user;
+      return {
+        ...user,
+        interests: Object.values(TRANSLATION.INTERESTS),
+      };
     }
     throw Error(ERROR.NO_USER_FOUND);
   };

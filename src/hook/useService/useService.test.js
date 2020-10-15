@@ -195,7 +195,20 @@ describe('useService', () => {
         userDetails = await result.current.getUserDetails();
       });
 
-      expect(userDetails).toStrictEqual({ name: 'Praveen' });
+      expect(userDetails).toStrictEqual({
+        name: 'Praveen',
+        interests: [
+          'music',
+          'food',
+          'culture',
+          'drinks',
+          'sport',
+          'travel',
+          'fun',
+          'business',
+          'art',
+        ],
+      });
       expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
     });
   });

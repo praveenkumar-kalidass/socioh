@@ -17,4 +17,15 @@ export default {
   FEEDBACK: 'Feedback',
   HOME: 'Home',
   LOGOUT: 'Logout',
+  INTERESTS: {
+    MUSIC: 'music',
+    FOOD: 'food',
+    CULTURE: 'culture',
+    DRINKS: 'drinks',
+    SPORT: 'sport',
+    TRAVEL: 'travel',
+    FUN: 'fun',
+    BUSINESS: 'business',
+    ART: 'art',
+  },
 };
