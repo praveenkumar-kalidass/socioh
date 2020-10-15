@@ -36,7 +36,7 @@ export const InterestsContainer = styled.View`
 
 export const InterestsTitleContainer = styled.View`
   align-items: center;
-  flex: 1;
+  margin-bottom: ${SPACING.SPACE_20};
 `;
 
 export const InterestsTitle = styled(Text)`

@@ -150,25 +150,6 @@ Array [
             }
           />
           <Text
-            bold={true}
-            style={
-              Array [
-                Object {
-                  "color": "#000",
-                  "fontFamily": "System",
-                  "fontSize": 16,
-                },
-                Object {
-                  "color": "#000000",
-                  "fontSize": 24,
-                  "marginTop": 10,
-                },
-              ]
-            }
-          >
-            Sample Text
-          </Text>
-          <Text
             style={
               Array [
                 Object {
@@ -221,9 +202,7 @@ Array [
               Array [
                 Object {
                   "alignItems": "center",
-                  "flexBasis": 0,
-                  "flexGrow": 1,
-                  "flexShrink": 1,
+                  "marginBottom": 20,
                 },
               ]
             }
@@ -246,65 +225,6 @@ Array [
             >
               My interests
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "flexDirection": "row",
-                  "flexWrap": "wrap",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignSelf": "flex-start",
-                    "backgroundColor": "#ED1727",
-                    "borderRadius": 13.5,
-                    "height": 27,
-                    "justifyContent": "center",
-                    "paddingBottom": 3,
-                    "paddingLeft": 6,
-                    "paddingRight": 6,
-                    "paddingTop": 3,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#feda68",
-                    "borderStyle": "solid",
-                    "borderWidth": 1,
-                    "marginBottom": 10,
-                    "marginLeft": 5,
-                    "marginRight": 5,
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#fff",
-                      "fontFamily": "System",
-                      "fontSize": 15,
-                      "lineHeight": 19,
-                      "paddingLeft": 3,
-                      "paddingRight": 3,
-                      "textAlign": "center",
-                    },
-                    Object {
-                      "color": "#000000",
-                      "fontStyle": "italic",
-                    },
-                  ]
-                }
-              >
-                music
-              </Text>
-            </View>
           </View>
         </View>
       </View>

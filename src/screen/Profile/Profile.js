@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardItem, Thumbnail } from 'native-base';
 
-import User from '../../asset/image/user.png';
+import UserAvatar from '../../asset/image/user.png';
+import useService from '../../hook/useService';
 import { CONSTANT, TRANSLATION } from '../../constant';
 import wrapPattern from '../../helper/wrapPattern';
 import {
@@ -18,13 +19,32 @@ import {
 } from './Profile.style';
 
 const Profile = () => {
+  const [user, setUser] = useState(null);
+  const { getUserDetails } = useService();
+
+  useEffect(() => {
+    const loadUserDetails = async () => {
+      try {
+        const data = await getUserDetails();
+        setUser(data);
+      } catch (error) {
+        console.warn('Error:', error);
+      }
+    };
+    loadUserDetails();
+  }, []);
+
   return (
     <ProfileContainer>
       <Card>
         <CardItem>
           <AvatarContainer>
-            <Thumbnail large source={User} />
-            <AvatarLabel bold>Sample Text</AvatarLabel>
+            <Thumbnail large source={UserAvatar} />
+            <If condition={Boolean(user)}>
+              <AvatarLabel testID="profile_user_name" bold>
+                {user.name}
+              </AvatarLabel>
+            </If>
             <AvatarDescription>
               {TRANSLATION.I_AM_SOCIOH_USER}
             </AvatarDescription>
@@ -35,11 +55,17 @@ const Profile = () => {
             <InterestsTitleContainer>
               <InterestsTitle>{TRANSLATION.MY_INTERESTS}</InterestsTitle>
             </InterestsTitleContainer>
-            <BadgeContainer>
-              <InterestChip>
-                <Interest>music</Interest>
-              </InterestChip>
-            </BadgeContainer>
+            <If condition={Boolean(user)}>
+              <BadgeContainer>
+                <For each="interest" index="index" of={user.interests}>
+                  <InterestChip key={`interest_${index}`}>
+                    <Interest testID={`profile_interest_${interest}`}>
+                      {interest}
+                    </Interest>
+                  </InterestChip>
+                </For>
+              </BadgeContainer>
+            </If>
           </InterestsContainer>
         </CardItem>
       </Card>
