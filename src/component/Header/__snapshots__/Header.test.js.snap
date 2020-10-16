@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should match snapshot 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Array [
       Object {
@@ -91,5 +90,5 @@ exports[`Header should match snapshot 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

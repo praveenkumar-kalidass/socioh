@@ -3,7 +3,7 @@ import { Text } from 'native-base';
 
 import { COLOR, FONT, SPACING } from '../../constant';
 
-export const HeaderContainer = styled.SafeAreaView`
+export const HeaderContainer = styled.View`
   background-color: ${COLOR.BACKGROUND};
 `;
 

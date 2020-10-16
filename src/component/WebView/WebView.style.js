@@ -3,7 +3,7 @@ import { Icon, Input } from 'native-base';
 
 import { COLOR, SPACING } from '../../constant';
 
-export const ModalContainer = styled.SafeAreaView`
+export const ModalContainer = styled.View`
   flex: 1;
 `;
 
