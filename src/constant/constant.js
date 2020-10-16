@@ -7,6 +7,10 @@ const SCREEN_BACKGROUND = {
   BACKGROUND_2: 'BACKGROUND_2',
 };
 
+const SOCIOH = {
+  AUTHOR_NAME: 'Praveenkumar Kalidass',
+};
+
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
@@ -14,4 +18,5 @@ export default {
   PASSWORD: 'password',
   ASYNC_STORAGE_KEY,
   SCREEN_BACKGROUND,
+  SOCIOH,
 };

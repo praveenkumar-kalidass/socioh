@@ -6,4 +6,7 @@ export default {
   BLACK: '#000000',
   RED: '#ff0000',
   PALE_GREEN: '#b0e6e7',
+  FACEBOOK: '#1a77f2',
+  INSTAGRAM: '#c136a6',
+  TWITTER: '#209dea',
 };
