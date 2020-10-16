@@ -8,4 +8,5 @@ export default {
   FACEBOOK: 'facebook-official',
   INSTAGRAM: 'instagram',
   TWITTER: 'twitter',
+  CLOSE: 'close',
 };
