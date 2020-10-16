@@ -9,7 +9,6 @@ export const HeaderContainer = styled.View`
 
 export const HeaderContentContainer = styled.View`
   position: absolute;
-  padding-vertical: ${SPACING.SPACE_50};
   left: ${SPACING.SPACE_0};
   right: ${SPACING.SPACE_0};
 `;

@@ -49,7 +49,6 @@ exports[`Header should match snapshot 1`] = `
       Array [
         Object {
           "left": 0,
-          "paddingVertical": 50,
           "position": "absolute",
           "right": 0,
         },
