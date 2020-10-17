@@ -5,5 +5,5 @@ import { COLOR, FONT } from '../constant';
 
 export const TabIcon = styled(Icon)`
   color: ${({ active }) => (active ? COLOR.PRIMARY : COLOR.PALE_GREEN)};
-  font-size: ${FONT.SIZE_50};
+  font-size: ${FONT.SIZE_24};
 `;

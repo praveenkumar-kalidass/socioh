@@ -5,4 +5,5 @@ export default {
   HOME: 'HOME',
   PROFILE: 'PROFILE',
   FEEDBACK: 'FEEDBACK',
+  CONTACTS: 'CONTACTS',
 };

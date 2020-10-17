@@ -17,6 +17,9 @@ export default {
   FEEDBACK: 'Feedback',
   HOME: 'Home',
   LOGOUT: 'Logout',
+  SCREENS: {
+    CONTACTS: 'Contacts',
+  },
   INTERESTS: {
     MUSIC: 'music',
     FOOD: 'food',

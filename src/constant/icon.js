@@ -5,6 +5,7 @@ export default {
   HOME: 'home',
   STAR: 'star',
   LOCK: 'lock-outline',
+  CONTACTS: 'contacts',
   FACEBOOK: 'facebook-official',
   INSTAGRAM: 'instagram',
   TWITTER: 'twitter',
