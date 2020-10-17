@@ -1,10 +1,14 @@
 import styled from 'styled-components/native';
-import { Text, Thumbnail, Icon } from 'native-base';
+import { Text, Thumbnail, Icon, CardItem } from 'native-base';
 
 import { FONT, SPACING } from '../../constant';
 
 export const FeedbackContainer = styled.View`
   padding-horizontal: ${SPACING.SPACE_20};
+`;
+
+export const CardContent = styled(CardItem)`
+  margin: ${SPACING.SPACE_10};
 `;
 
 export const Name = styled(Text)`

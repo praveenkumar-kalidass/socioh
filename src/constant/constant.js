@@ -11,6 +11,12 @@ const SOCIOH = {
   AUTHOR_NAME: 'Praveenkumar Kalidass',
 };
 
+const SOCIAL_LINK = {
+  FACEBOOK: 'https://www.facebook.com/mrpravin94',
+  INSTAGRAM: 'https://www.instagram.com/mrpravin94/',
+  TWITTER: 'https://twitter.com/mrpravin94',
+};
+
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
@@ -19,4 +25,5 @@ export default {
   ASYNC_STORAGE_KEY,
   SCREEN_BACKGROUND,
   SOCIOH,
+  SOCIAL_LINK,
 };
