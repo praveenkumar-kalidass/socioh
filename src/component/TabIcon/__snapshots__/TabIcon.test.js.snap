@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabIcon should match snapshot 1`] = `
+<Text
+  allowFontScaling={false}
+  style={
+    Array [
+      Object {
+        "color": undefined,
+        "fontSize": 12,
+      },
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "#000",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "#b0e6e7",
+          "fontSize": 24,
+        },
+      ],
+      Object {
+        "fontFamily": "Ionicons",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+      },
+      Object {},
+    ]
+  }
+>
+  
+</Text>
+`;
