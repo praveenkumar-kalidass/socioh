@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { ROUTE, COLOR, TRANSLATION } from '../constant';
 import Header from '../component/Header';
-import Feedback from '../screen/Feedback';
+import Contacts from '../screen/Contacts';
 
 const ContactStack = createStackNavigator();
 
@@ -15,7 +15,7 @@ export default () => (
     }}>
     <ContactStack.Screen
       name={ROUTE.CONTACTS}
-      component={Feedback}
+      component={Contacts}
       options={{
         title: TRANSLATION.SCREENS.CONTACTS,
         header: (props) => <Header {...props} />,

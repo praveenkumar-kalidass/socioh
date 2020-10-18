@@ -24,7 +24,8 @@ export default () => (
       component={Signin}
       options={{
         cardOverlayEnabled: true,
-        cardOverlay: () => Platform.OS === CONSTANT.ANDROID && <Background1 />,
+        cardOverlay: () =>
+          Platform.OS === CONSTANT.OS.ANDROID && <Background1 />,
       }}
     />
     <Stack.Screen
@@ -32,7 +33,8 @@ export default () => (
       component={Signup}
       options={{
         cardOverlayEnabled: true,
-        cardOverlay: () => Platform.OS === CONSTANT.ANDROID && <Background1 />,
+        cardOverlay: () =>
+          Platform.OS === CONSTANT.OS.ANDROID && <Background1 />,
       }}
     />
     <Stack.Screen name={ROUTE.HOME} component={HomeBottomTabNavigator} />

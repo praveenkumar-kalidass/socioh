@@ -17,13 +17,18 @@ const SOCIAL_LINK = {
   TWITTER: 'https://twitter.com/mrpravin94',
 };
 
+const OS = {
+  IOS: 'ios',
+  ANDROID: 'android',
+};
+
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
-  ANDROID: 'android',
   PASSWORD: 'password',
   ASYNC_STORAGE_KEY,
   SCREEN_BACKGROUND,
   SOCIOH,
   SOCIAL_LINK,
+  OS,
 };
