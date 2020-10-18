@@ -6127,6 +6127,11 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-contacts@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-contacts/-/react-native-contacts-6.0.2.tgz#c11c9b0ab0c0e124fa91c51c2e0a7358e331fc56"
+  integrity sha512-7OT6X/fAg8e9sk0glKBNpE5zv8bOebxVK1d+q9aL5Aoh0zIBqVFn/KVgv5Rx1txaL28qndc5iKDP+jehnv+4sw==
+
 react-native-drawer@2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/react-native-drawer/-/react-native-drawer-2.5.1.tgz#08b9314184f48c724f1b467f8859797369798654"
