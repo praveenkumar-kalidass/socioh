@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { Card, CardItem, Input } from 'native-base';
 
@@ -8,6 +9,7 @@ import validateFields from '../../helper/validateFields';
 import useService from '../../hook/useService';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signin.schema';
 import {
+  SigninGrid,
   SigninContainer,
   SigninButton,
   SigninButtonText,
@@ -58,41 +60,47 @@ const Signin = ({ navigation }) => {
   }, [navigation, isSubmit, errorMessages]);
 
   return (
-    <SigninContainer>
-      <Card>
-        <For each="field" index="index" of={FIELDS}>
-          <CardItem key={`signin_item_${index}`}>
-            <InputContainer>
-              <InputLabel>{field.label}</InputLabel>
-              <InputGrid regular>
-                <Input
-                  placeholder={field.placeholder}
-                  value={fields[field.key]}
-                  onChangeText={(value) => handleFieldChange(field.key, value)}
-                  onBlur={() => handleValidation()}
-                  secureTextEntry={field.key === CONSTANT.PASSWORD}
-                  testID={`signin_input_${field.key}`}
-                />
-              </InputGrid>
-              <If condition={errorMessages[field.key]}>
-                <InputErrorText testID={`signin_error_${field.key}`}>
-                  {errorMessages[field.key]}
-                </InputErrorText>
-              </If>
-            </InputContainer>
+    <SigninGrid
+      behavior={Platform.OS === CONSTANT.OS.IOS ? 'padding' : 'height'}>
+      <SigninContainer>
+        <Card>
+          <For each="field" index="index" of={FIELDS}>
+            <CardItem key={`signin_item_${index}`}>
+              <InputContainer>
+                <InputLabel>{field.label}</InputLabel>
+                <InputGrid regular>
+                  <Input
+                    autoFocus={index === 0}
+                    placeholder={field.placeholder}
+                    value={fields[field.key]}
+                    onChangeText={(value) =>
+                      handleFieldChange(field.key, value)
+                    }
+                    onBlur={() => handleValidation()}
+                    secureTextEntry={field.key === CONSTANT.PASSWORD}
+                    testID={`signin_input_${field.key}`}
+                  />
+                </InputGrid>
+                <If condition={errorMessages[field.key]}>
+                  <InputErrorText testID={`signin_error_${field.key}`}>
+                    {errorMessages[field.key]}
+                  </InputErrorText>
+                </If>
+              </InputContainer>
+            </CardItem>
+          </For>
+          <CardItem footer>
+            <SigninButton
+              testID="signin_submit"
+              rounded
+              large
+              onPress={handleSubmit}>
+              <SigninButtonText>{TRANSLATION.SIGN_IN}</SigninButtonText>
+            </SigninButton>
           </CardItem>
-        </For>
-        <CardItem footer>
-          <SigninButton
-            testID="signin_submit"
-            rounded
-            large
-            onPress={handleSubmit}>
-            <SigninButtonText>{TRANSLATION.SIGN_IN}</SigninButtonText>
-          </SigninButton>
-        </CardItem>
-      </Card>
-    </SigninContainer>
+        </Card>
+      </SigninContainer>
+    </SigninGrid>
   );
 };
 

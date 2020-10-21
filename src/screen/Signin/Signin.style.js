@@ -3,6 +3,10 @@ import { Button, Item, Text } from 'native-base';
 
 import { COLOR, FONT, SPACING } from '../../constant';
 
+export const SigninGrid = styled.KeyboardAvoidingView`
+  flex: 1;
+`;
+
 export const SigninContainer = styled.View`
   flex: 1;
   justify-content: center;
