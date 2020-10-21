@@ -3,6 +3,10 @@ import { Button, CheckBox, Item, Text } from 'native-base';
 
 import { COLOR, FONT, SPACING } from '../../constant';
 
+export const SignupGrid = styled.KeyboardAvoidingView`
+  flex: 1;
+`;
+
 export const SignupContainer = styled.View`
   flex: 1;
   justify-content: center;

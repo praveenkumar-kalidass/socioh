@@ -58,356 +58,464 @@ Array [
     </RNSVGSvgView>
   </View>,
   <View
+    onLayout={[Function]}
     style={
       Array [
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+          },
+        ],
         Object {
-          "flexBasis": 0,
-          "flexGrow": 1,
-          "flexShrink": 1,
-          "justifyContent": "center",
-          "paddingHorizontal": 20,
+          "paddingBottom": 0,
         },
       ]
     }
   >
     <View
       style={
-        Object {
-          "backgroundColor": "#fff",
-          "borderBottomWidth": 0.5,
-          "borderColor": "#ccc",
-          "borderLeftWidth": 0.5,
-          "borderRadius": 2,
-          "borderRightWidth": 0.5,
-          "borderTopWidth": 0.5,
-          "elevation": 3,
-          "flexWrap": "nowrap",
-          "marginBottom": 5,
-          "marginLeft": 2,
-          "marginRight": 2,
-          "marginTop": 5,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 2,
-            "width": 0,
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "paddingHorizontal": 20,
           },
-          "shadowOpacity": 0.1,
-          "shadowRadius": 1.5,
-        }
+        ]
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
             "backgroundColor": "#fff",
+            "borderBottomWidth": 0.5,
+            "borderColor": "#ccc",
+            "borderLeftWidth": 0.5,
             "borderRadius": 2,
-            "flexDirection": "row",
-            "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
-            "paddingTop": 10,
+            "borderRightWidth": 0.5,
+            "borderTopWidth": 0.5,
+            "elevation": 3,
+            "flexWrap": "nowrap",
+            "marginBottom": 5,
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 1.5,
           }
         }
       >
         <View
           style={
-            Array [
-              Object {
-                "flexBasis": 0,
-                "flexGrow": 1,
-                "flexShrink": 1,
-              },
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            }
           }
         >
-          <Text
+          <View
             style={
               Array [
                 Object {
-                  "color": "#000",
-                  "fontFamily": "System",
-                  "fontSize": 16,
-                },
-                Object {
-                  "marginBottom": 10,
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
                 },
               ]
             }
           >
-            Your name
-          </Text>
-          <View
-            accessible={true}
-            focusable={false}
-            forwardedRef={[Function]}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#f0f8f8",
-                "borderBottomWidth": 1,
-                "borderColor": "#D9D5DC",
-                "borderLeftWidth": 1,
-                "borderRadius": 5,
-                "borderRightWidth": 1,
-                "borderTopWidth": 1,
-                "borderWidth": undefined,
-                "flexDirection": "row",
-                "marginLeft": 2,
-                "opacity": 1,
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "marginBottom": 10,
+                  },
+                ]
               }
-            }
-          >
-            <TextInput
-              allowFontScaling={true}
-              editable={true}
-              onBlur={[Function]}
-              onChangeText={[Function]}
-              placeholder="Name"
-              placeholderTextColor="#575757"
-              rejectResponderTermination={true}
-              secureTextEntry={false}
+            >
+              Your name
+            </Text>
+            <View
+              accessible={true}
+              focusable={false}
+              forwardedRef={[Function]}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "color": "#000",
-                  "flex": 1,
-                  "fontSize": 17,
-                  "height": 50,
-                  "paddingLeft": 8,
-                  "paddingRight": 5,
-                  "top": 1.5,
+                  "alignItems": "center",
+                  "backgroundColor": "#f0f8f8",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#D9D5DC",
+                  "borderLeftWidth": 1,
+                  "borderRadius": 5,
+                  "borderRightWidth": 1,
+                  "borderTopWidth": 1,
+                  "borderWidth": undefined,
+                  "flexDirection": "row",
+                  "marginLeft": 2,
+                  "opacity": 1,
                 }
               }
-              testID="signup_input_name"
-              underlineColorAndroid="rgba(0,0,0,0)"
-              value=""
-            />
+            >
+              <TextInput
+                allowFontScaling={true}
+                autoFocus={true}
+                editable={true}
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="Name"
+                placeholderTextColor="#575757"
+                rejectResponderTermination={true}
+                secureTextEntry={false}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "fontSize": 17,
+                    "height": 50,
+                    "paddingLeft": 8,
+                    "paddingRight": 5,
+                    "top": 1.5,
+                  }
+                }
+                testID="signup_input_name"
+                underlineColorAndroid="rgba(0,0,0,0)"
+                value=""
+              />
+            </View>
           </View>
         </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderRadius": 2,
-            "flexDirection": "row",
-            "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
-            "paddingTop": 10,
-          }
-        }
-      >
         <View
           style={
-            Array [
-              Object {
-                "flexBasis": 0,
-                "flexGrow": 1,
-                "flexShrink": 1,
-              },
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            }
           }
         >
-          <Text
+          <View
             style={
               Array [
                 Object {
-                  "color": "#000",
-                  "fontFamily": "System",
-                  "fontSize": 16,
-                },
-                Object {
-                  "marginBottom": 10,
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
                 },
               ]
             }
           >
-            Your e-mail
-          </Text>
-          <View
-            accessible={true}
-            focusable={false}
-            forwardedRef={[Function]}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#f0f8f8",
-                "borderBottomWidth": 1,
-                "borderColor": "#D9D5DC",
-                "borderLeftWidth": 1,
-                "borderRadius": 5,
-                "borderRightWidth": 1,
-                "borderTopWidth": 1,
-                "borderWidth": undefined,
-                "flexDirection": "row",
-                "marginLeft": 2,
-                "opacity": 1,
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "marginBottom": 10,
+                  },
+                ]
               }
-            }
-          >
-            <TextInput
-              allowFontScaling={true}
-              editable={true}
-              onBlur={[Function]}
-              onChangeText={[Function]}
-              placeholder="E-mail"
-              placeholderTextColor="#575757"
-              rejectResponderTermination={true}
-              secureTextEntry={false}
+            >
+              Your e-mail
+            </Text>
+            <View
+              accessible={true}
+              focusable={false}
+              forwardedRef={[Function]}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "color": "#000",
-                  "flex": 1,
-                  "fontSize": 17,
-                  "height": 50,
-                  "paddingLeft": 8,
-                  "paddingRight": 5,
-                  "top": 1.5,
+                  "alignItems": "center",
+                  "backgroundColor": "#f0f8f8",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#D9D5DC",
+                  "borderLeftWidth": 1,
+                  "borderRadius": 5,
+                  "borderRightWidth": 1,
+                  "borderTopWidth": 1,
+                  "borderWidth": undefined,
+                  "flexDirection": "row",
+                  "marginLeft": 2,
+                  "opacity": 1,
                 }
               }
-              testID="signup_input_email"
-              underlineColorAndroid="rgba(0,0,0,0)"
-              value=""
-            />
+            >
+              <TextInput
+                allowFontScaling={true}
+                autoFocus={false}
+                editable={true}
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="E-mail"
+                placeholderTextColor="#575757"
+                rejectResponderTermination={true}
+                secureTextEntry={false}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "fontSize": 17,
+                    "height": 50,
+                    "paddingLeft": 8,
+                    "paddingRight": 5,
+                    "top": 1.5,
+                  }
+                }
+                testID="signup_input_email"
+                underlineColorAndroid="rgba(0,0,0,0)"
+                value=""
+              />
+            </View>
           </View>
         </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderRadius": 2,
-            "flexDirection": "row",
-            "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
-            "paddingTop": 10,
-          }
-        }
-      >
         <View
           style={
-            Array [
-              Object {
-                "flexBasis": 0,
-                "flexGrow": 1,
-                "flexShrink": 1,
-              },
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            }
           }
         >
-          <Text
+          <View
             style={
               Array [
                 Object {
-                  "color": "#000",
-                  "fontFamily": "System",
-                  "fontSize": 16,
-                },
-                Object {
-                  "marginBottom": 10,
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
                 },
               ]
             }
           >
-            Create password
-          </Text>
-          <View
-            accessible={true}
-            focusable={false}
-            forwardedRef={[Function]}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#f0f8f8",
-                "borderBottomWidth": 1,
-                "borderColor": "#D9D5DC",
-                "borderLeftWidth": 1,
-                "borderRadius": 5,
-                "borderRightWidth": 1,
-                "borderTopWidth": 1,
-                "borderWidth": undefined,
-                "flexDirection": "row",
-                "marginLeft": 2,
-                "opacity": 1,
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "marginBottom": 10,
+                  },
+                ]
               }
+            >
+              Create password
+            </Text>
+            <View
+              accessible={true}
+              focusable={false}
+              forwardedRef={[Function]}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#f0f8f8",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#D9D5DC",
+                  "borderLeftWidth": 1,
+                  "borderRadius": 5,
+                  "borderRightWidth": 1,
+                  "borderTopWidth": 1,
+                  "borderWidth": undefined,
+                  "flexDirection": "row",
+                  "marginLeft": 2,
+                  "opacity": 1,
+                }
+              }
+            >
+              <TextInput
+                allowFontScaling={true}
+                autoFocus={false}
+                editable={true}
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                placeholder="Password"
+                placeholderTextColor="#575757"
+                rejectResponderTermination={true}
+                secureTextEntry={true}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "fontSize": 17,
+                    "height": 50,
+                    "paddingLeft": 8,
+                    "paddingRight": 5,
+                    "top": 1.5,
+                  }
+                }
+                testID="signup_input_password"
+                underlineColorAndroid="rgba(0,0,0,0)"
+                value=""
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "flexBasis": 0,
+                  "flexDirection": "row",
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                },
+              ]
             }
           >
-            <TextInput
-              allowFontScaling={true}
-              editable={true}
-              onBlur={[Function]}
-              onChangeText={[Function]}
-              placeholder="Password"
-              placeholderTextColor="#575757"
-              rejectResponderTermination={true}
-              secureTextEntry={true}
+            <View
+              accessible={true}
+              focusable={true}
+              forwardedRef={[Function]}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderBottomWidth": 1,
+                  "borderColor": "#feda68",
+                  "borderLeftWidth": 1,
+                  "borderRadius": 13,
+                  "borderRightWidth": 1,
+                  "borderTopWidth": 1,
+                  "height": 20,
+                  "left": 10,
+                  "marginRight": 20,
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingBottom": 0,
+                  "paddingLeft": 3,
+                  "width": 20,
+                }
+              }
+              testID="signup_terms"
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": undefined,
+                      "fontSize": 12,
+                    },
+                    Object {
+                      "color": "transparent",
+                      "fontSize": 25.555555555555554,
+                      "lineHeight": 21,
+                      "marginTop": undefined,
+                      "textShadowRadius": 0,
+                    },
+                    Object {
+                      "fontFamily": "Ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+            <Text
               style={
                 Object {
                   "color": "#000",
-                  "flex": 1,
-                  "fontSize": 17,
-                  "height": 50,
-                  "paddingLeft": 8,
-                  "paddingRight": 5,
-                  "top": 1.5,
+                  "fontFamily": "System",
+                  "fontSize": 16,
                 }
               }
-              testID="signup_input_password"
-              underlineColorAndroid="rgba(0,0,0,0)"
-              value=""
-            />
+            >
+              I agree with terms & conditions
+            </Text>
           </View>
         </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderRadius": 2,
-            "flexDirection": "row",
-            "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
-            "paddingTop": 10,
-          }
-        }
-      >
         <View
+          footer={true}
           style={
-            Array [
-              Object {
-                "flexBasis": 0,
-                "flexDirection": "row",
-                "flexGrow": 1,
-                "flexShrink": 1,
-              },
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderBottomWidth": null,
+              "borderRadius": 2,
+              "flexDirection": "row",
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            }
           }
         >
           <View
@@ -423,145 +531,58 @@ Array [
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "transparent",
-                "borderBottomWidth": 1,
-                "borderColor": "#feda68",
-                "borderLeftWidth": 1,
-                "borderRadius": 13,
-                "borderRightWidth": 1,
-                "borderTopWidth": 1,
-                "height": 20,
-                "left": 10,
-                "marginRight": 20,
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "backgroundColor": "#feda68",
+                "borderBottomWidth": null,
+                "borderColor": "#007aff",
+                "borderLeftWidth": null,
+                "borderRadius": 57,
+                "borderRightWidth": null,
+                "borderTopWidth": null,
+                "borderWidth": undefined,
+                "elevation": 2,
+                "flexBasis": 0,
+                "flexDirection": "row",
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "height": 60,
+                "justifyContent": "center",
+                "marginHorizontal": 10,
                 "opacity": 1,
-                "overflow": "hidden",
-                "paddingBottom": 0,
-                "paddingLeft": 3,
-                "width": 20,
+                "paddingBottom": 6,
+                "paddingTop": 6,
+                "shadowColor": undefined,
+                "shadowOffset": undefined,
+                "shadowOpacity": undefined,
+                "shadowRadius": undefined,
               }
             }
-            testID="signup_terms"
+            testID="signup_submit"
           >
             <Text
-              allowFontScaling={false}
               style={
                 Array [
                   Object {
-                    "color": undefined,
-                    "fontSize": 12,
+                    "backgroundColor": "transparent",
+                    "color": "#fff",
+                    "fontFamily": "System",
+                    "fontSize": 22,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "paddingLeft": 16,
+                    "paddingRight": 16,
                   },
                   Object {
-                    "color": "transparent",
-                    "fontSize": 25.555555555555554,
-                    "lineHeight": 21,
-                    "marginTop": undefined,
-                    "textShadowRadius": 0,
+                    "color": "#000000",
+                    "textAlign": "center",
                   },
-                  Object {
-                    "fontFamily": "Ionicons",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {},
                 ]
               }
             >
-              
+              Sign up
             </Text>
           </View>
-          <Text
-            style={
-              Object {
-                "color": "#000",
-                "fontFamily": "System",
-                "fontSize": 16,
-              }
-            }
-          >
-            I agree with terms & conditions
-          </Text>
-        </View>
-      </View>
-      <View
-        footer={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#fff",
-            "borderBottomWidth": null,
-            "borderRadius": 2,
-            "flexDirection": "row",
-            "paddingBottom": 10,
-            "paddingLeft": 15,
-            "paddingRight": 15,
-            "paddingTop": 10,
-          }
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          forwardedRef={[Function]}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": "flex-start",
-              "backgroundColor": "#feda68",
-              "borderBottomWidth": null,
-              "borderColor": "#007aff",
-              "borderLeftWidth": null,
-              "borderRadius": 57,
-              "borderRightWidth": null,
-              "borderTopWidth": null,
-              "borderWidth": undefined,
-              "elevation": 2,
-              "flexBasis": 0,
-              "flexDirection": "row",
-              "flexGrow": 1,
-              "flexShrink": 1,
-              "height": 60,
-              "justifyContent": "center",
-              "marginHorizontal": 10,
-              "opacity": 1,
-              "paddingBottom": 6,
-              "paddingTop": 6,
-              "shadowColor": undefined,
-              "shadowOffset": undefined,
-              "shadowOpacity": undefined,
-              "shadowRadius": undefined,
-            }
-          }
-          testID="signup_submit"
-        >
-          <Text
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#fff",
-                  "fontFamily": "System",
-                  "fontSize": 22,
-                  "marginLeft": 0,
-                  "marginRight": 0,
-                  "paddingLeft": 16,
-                  "paddingRight": 16,
-                },
-                Object {
-                  "color": "#000000",
-                  "textAlign": "center",
-                },
-              ]
-            }
-          >
-            Sign up
-          </Text>
         </View>
       </View>
     </View>

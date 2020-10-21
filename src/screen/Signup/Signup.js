@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { Card, CardItem, Input, Text } from 'native-base';
 
@@ -8,6 +9,7 @@ import validateFields from '../../helper/validateFields';
 import useService from '../../hook/useService';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signup.schema';
 import {
+  SignupGrid,
   SignupContainer,
   SignupButton,
   SignupButtonText,
@@ -59,54 +61,60 @@ const Signup = ({ navigation }) => {
   };
 
   return (
-    <SignupContainer>
-      <Card>
-        <For each="field" index="index" of={FIELDS}>
-          <CardItem key={`signup_item_${index}`}>
-            <InputContainer>
-              <InputLabel>{field.label}</InputLabel>
-              <InputGrid regular>
-                <Input
-                  placeholder={field.placeholder}
-                  value={fields[field.key]}
-                  onChangeText={(value) => handleFieldChange(field.key, value)}
-                  onBlur={() => handleValidation()}
-                  secureTextEntry={field.key === CONSTANT.PASSWORD}
-                  testID={`signup_input_${field.key}`}
-                />
-              </InputGrid>
-              <If condition={errorMessages[field.key]}>
-                <InputErrorText testID={`signup_error_${field.key}`}>
-                  {errorMessages[field.key]}
-                </InputErrorText>
-              </If>
-            </InputContainer>
+    <SignupGrid
+      behavior={Platform.OS === CONSTANT.OS.IOS ? 'padding' : 'height'}>
+      <SignupContainer>
+        <Card>
+          <For each="field" index="index" of={FIELDS}>
+            <CardItem key={`signup_item_${index}`}>
+              <InputContainer>
+                <InputLabel>{field.label}</InputLabel>
+                <InputGrid regular>
+                  <Input
+                    autoFocus={index === 0}
+                    placeholder={field.placeholder}
+                    value={fields[field.key]}
+                    onChangeText={(value) =>
+                      handleFieldChange(field.key, value)
+                    }
+                    onBlur={() => handleValidation()}
+                    secureTextEntry={field.key === CONSTANT.PASSWORD}
+                    testID={`signup_input_${field.key}`}
+                  />
+                </InputGrid>
+                <If condition={errorMessages[field.key]}>
+                  <InputErrorText testID={`signup_error_${field.key}`}>
+                    {errorMessages[field.key]}
+                  </InputErrorText>
+                </If>
+              </InputContainer>
+            </CardItem>
+          </For>
+          <CardItem>
+            <AgreementContainer>
+              <StyledCheckbox
+                testID="signup_terms"
+                checked={isTermsAgreed}
+                onPress={() => setIsTermsAgreed(!isTermsAgreed)}
+                color={
+                  isTermsError && !isTermsAgreed ? COLOR.RED : COLOR.SECONDARY
+                }
+              />
+              <Text>{TRANSLATION.TERMS_AND_CONDITIONS}</Text>
+            </AgreementContainer>
           </CardItem>
-        </For>
-        <CardItem>
-          <AgreementContainer>
-            <StyledCheckbox
-              testID="signup_terms"
-              checked={isTermsAgreed}
-              onPress={() => setIsTermsAgreed(!isTermsAgreed)}
-              color={
-                isTermsError && !isTermsAgreed ? COLOR.RED : COLOR.SECONDARY
-              }
-            />
-            <Text>{TRANSLATION.TERMS_AND_CONDITIONS}</Text>
-          </AgreementContainer>
-        </CardItem>
-        <CardItem footer>
-          <SignupButton
-            testID="signup_submit"
-            rounded
-            large
-            onPress={handleSubmit}>
-            <SignupButtonText>{TRANSLATION.SIGN_UP}</SignupButtonText>
-          </SignupButton>
-        </CardItem>
-      </Card>
-    </SignupContainer>
+          <CardItem footer>
+            <SignupButton
+              testID="signup_submit"
+              rounded
+              large
+              onPress={handleSubmit}>
+              <SignupButtonText>{TRANSLATION.SIGN_UP}</SignupButtonText>
+            </SignupButton>
+          </CardItem>
+        </Card>
+      </SignupContainer>
+    </SignupGrid>
   );
 };
 
