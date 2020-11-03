@@ -1,6 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks';
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
+import RNContacts from 'react-native-contacts';
 
 import useAjax from '../useAjax';
 import useUser from '../useUser';
@@ -210,6 +211,33 @@ describe('useService', () => {
         ],
       });
       expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('getContacts', () => {
+    it('should get contacts successfully', async () => {
+      RNContacts.requestPermission.mockResolvedValueOnce('authorized');
+      RNContacts.getAll.mockResolvedValueOnce([{ name: 'Praveen' }]);
+
+      const { result } = renderHook(() => useService());
+      let contacts;
+
+      await act(async () => {
+        contacts = await result.current.getContacts();
+      });
+
+      expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+      expect(contacts).toStrictEqual([{ name: 'Praveen' }]);
+    });
+
+    it('should throw unauthorized error, when request permission returns denied', async () => {
+      RNContacts.requestPermission.mockResolvedValueOnce('denied');
+
+      const { result } = renderHook(() => useService());
+
+      await expect(result.current.getContacts()).rejects.toEqual(
+        Error('UNAUTHORIZED_TO_READ_CONTACTS'),
+      );
     });
   });
 });

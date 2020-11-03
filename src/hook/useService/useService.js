@@ -1,5 +1,6 @@
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
+import RNContacts from 'react-native-contacts';
 
 import { CONSTANT, ERROR, TRANSLATION } from '../../constant';
 import useAjax from '../useAjax';
@@ -54,7 +55,17 @@ const useService = () => {
     throw Error(ERROR.NO_USER_FOUND);
   };
 
-  return { signUp, signIn, logout, getUserDetails };
+  const getContacts = async () => {
+    const permission = await RNContacts.requestPermission();
+    if (permission === CONSTANT.PERMISSION.AUTHORIZED) {
+      const contacts = await RNContacts.getAll();
+      await ajax();
+      return contacts;
+    }
+    throw Error(ERROR.UNAUTHORIZED_TO_READ_CONTACTS);
+  };
+
+  return { signUp, signIn, logout, getUserDetails, getContacts };
 };
 
 export default useService;

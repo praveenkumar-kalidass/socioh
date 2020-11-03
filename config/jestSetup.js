@@ -24,3 +24,8 @@ jest.mock('react-native-keychain', () => ({
   getGenericPassword: jest.fn().mockResolvedValue(),
   resetGenericPassword: jest.fn().mockResolvedValue(),
 }));
+
+jest.mock('react-native-contacts', () => ({
+  requestPermission: jest.fn(),
+  getAll: jest.fn(),
+}));

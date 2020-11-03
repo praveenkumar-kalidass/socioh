@@ -22,6 +22,10 @@ const OS = {
   ANDROID: 'android',
 };
 
+const PERMISSION = {
+  AUTHORIZED: 'authorized',
+};
+
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
@@ -31,4 +35,5 @@ export default {
   SOCIOH,
   SOCIAL_LINK,
   OS,
+  PERMISSION,
 };
