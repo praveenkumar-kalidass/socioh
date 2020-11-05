@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ScrollView } from 'react-native';
 import {
   Card,
   CardItem,
@@ -35,40 +36,42 @@ const Contacts = () => {
 
   return (
     <ContactsContainer>
-      <Card>
-        <CardItem header>
-          <Item regular rounded style={{ borderColor: COLOR.PRIMARY }}>
-            <Input placeholder="Input" />
-          </Item>
-        </CardItem>
-        <If condition={Boolean(contacts.length)}>
-          <List>
-            <For each="contact" index="index" of={contacts}>
-              <ListItem avatar key={`contact_${index}`}>
-                <Left>
-                  <Thumbnail small source={UserAvatar} />
-                </Left>
-                <ContactDetails>
-                  <Text testID={`contact_name_${index}`}>
-                    {`${contact.givenName} ${contact.familyName}`}
-                  </Text>
-                  <For
-                    each="number"
-                    index="numberIndex"
-                    of={contact.phoneNumbers}>
-                    <Text
-                      note
-                      testID={`phone_number_${index}_${numberIndex}`}
-                      key={`phone_number_${index}_${numberIndex}`}>
-                      {number.number}
+      <If condition={Boolean(contacts.length)}>
+        <Card>
+          <CardItem header>
+            <Item regular rounded style={{ borderColor: COLOR.PRIMARY }}>
+              <Input placeholder="Input" />
+            </Item>
+          </CardItem>
+          <ScrollView>
+            <List>
+              <For each="contact" index="index" of={contacts}>
+                <ListItem avatar key={`contact_${index}`}>
+                  <Left>
+                    <Thumbnail small source={UserAvatar} />
+                  </Left>
+                  <ContactDetails>
+                    <Text testID={`contact_name_${index}`}>
+                      {`${contact.givenName} ${contact.familyName}`}
                     </Text>
-                  </For>
-                </ContactDetails>
-              </ListItem>
-            </For>
-          </List>
-        </If>
-      </Card>
+                    <For
+                      each="number"
+                      index="numberIndex"
+                      of={contact.phoneNumbers}>
+                      <Text
+                        note
+                        testID={`phone_number_${index}_${numberIndex}`}
+                        key={`phone_number_${index}_${numberIndex}`}>
+                        {number.number}
+                      </Text>
+                    </For>
+                  </ContactDetails>
+                </ListItem>
+              </For>
+            </List>
+          </ScrollView>
+        </Card>
+      </If>
     </ContactsContainer>
   );
 };
