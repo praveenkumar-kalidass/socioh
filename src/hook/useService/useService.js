@@ -55,10 +55,15 @@ const useService = () => {
     throw Error(ERROR.NO_USER_FOUND);
   };
 
-  const getContacts = async () => {
+  const getContacts = async (search) => {
     const permission = await RNContacts.requestPermission();
     if (permission === CONSTANT.PERMISSION.AUTHORIZED) {
-      const contacts = await RNContacts.getAll();
+      let contacts;
+      if (search) {
+        contacts = await RNContacts.getContactsMatchingString(search);
+      } else {
+        contacts = await RNContacts.getAll();
+      }
       await ajax();
       return contacts;
     }

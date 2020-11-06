@@ -230,6 +230,24 @@ describe('useService', () => {
       expect(contacts).toStrictEqual([{ name: 'Praveen' }]);
     });
 
+    it('should get contacts by matching string, when search text is not empty', async () => {
+      RNContacts.requestPermission.mockResolvedValueOnce('authorized');
+      RNContacts.getContactsMatchingString.mockResolvedValueOnce([
+        { name: 'Praveen' },
+      ]);
+
+      const { result } = renderHook(() => useService());
+      let contacts;
+
+      await act(async () => {
+        contacts = await result.current.getContacts('Prav');
+      });
+
+      expect(RNContacts.getContactsMatchingString).toHaveBeenCalledWith('Prav');
+      expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+      expect(contacts).toStrictEqual([{ name: 'Praveen' }]);
+    });
+
     it('should throw unauthorized error, when request permission returns denied', async () => {
       RNContacts.requestPermission.mockResolvedValueOnce('denied');
 

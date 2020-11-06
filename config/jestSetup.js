@@ -28,4 +28,5 @@ jest.mock('react-native-keychain', () => ({
 jest.mock('react-native-contacts', () => ({
   requestPermission: jest.fn(),
   getAll: jest.fn(),
+  getContactsMatchingString: jest.fn(),
 }));

@@ -17,6 +17,7 @@ export default {
   FEEDBACK: 'Feedback',
   HOME: 'Home',
   LOGOUT: 'Logout',
+  SEARCH: 'Search',
   SCREENS: {
     CONTACTS: 'Contacts',
   },
