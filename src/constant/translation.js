@@ -20,6 +20,7 @@ export default {
   SEARCH: 'Search',
   SCREENS: {
     CONTACTS: 'Contacts',
+    CONTACT: 'Contact',
   },
   INTERESTS: {
     MUSIC: 'music',
