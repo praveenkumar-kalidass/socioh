@@ -13,17 +13,17 @@ import {
 } from 'native-base';
 
 import UserAvatar from '../../asset/image/user.png';
-import { ContactDetails, ContactsContainer } from './Contacts.style';
-import { COLOR } from '../../constant';
+import { COLOR, TRANSLATION } from '../../constant';
 import useService from '../../hook/useService';
+import { ContactDetails, ContactsContainer } from './Contacts.style';
 
 const Contacts = () => {
   const [contacts, setContacts] = useState([]);
   const { getContacts } = useService();
 
-  const loadContacts = async () => {
+  const loadContacts = async (search) => {
     try {
-      const contactList = await getContacts();
+      const contactList = await getContacts(search);
       setContacts(contactList);
     } catch (error) {
       console.warn('Error:', error);
@@ -40,7 +40,11 @@ const Contacts = () => {
         <Card>
           <CardItem header>
             <Item regular rounded style={{ borderColor: COLOR.PRIMARY }}>
-              <Input placeholder="Input" />
+              <Input
+                testID="contact_search_input"
+                placeholder={TRANSLATION.SEARCH}
+                onChangeText={loadContacts}
+              />
             </Item>
           </CardItem>
           <ScrollView>
