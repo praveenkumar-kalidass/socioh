@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ScrollView } from 'react-native';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardItem,
@@ -13,11 +14,11 @@ import {
 } from 'native-base';
 
 import UserAvatar from '../../asset/image/user.png';
-import { COLOR, TRANSLATION } from '../../constant';
+import { COLOR, ROUTE, TRANSLATION } from '../../constant';
 import useService from '../../hook/useService';
 import { ContactDetails, ContactsContainer } from './Contacts.style';
 
-const Contacts = () => {
+const Contacts = ({ navigation }) => {
   const [contacts, setContacts] = useState([]);
   const { getContacts } = useService();
 
@@ -33,6 +34,10 @@ const Contacts = () => {
   useEffect(() => {
     loadContacts();
   }, []);
+
+  const navigateToContact = (contact) => {
+    navigation.navigate(ROUTE.CONTACT, { contact });
+  };
 
   return (
     <ContactsContainer>
@@ -50,7 +55,10 @@ const Contacts = () => {
           <ScrollView>
             <List>
               <For each="contact" index="index" of={contacts}>
-                <ListItem avatar key={`contact_${index}`}>
+                <ListItem
+                  avatar
+                  key={`contact_${index}`}
+                  onPress={() => navigateToContact(contact)}>
                   <Left>
                     <Thumbnail small source={UserAvatar} />
                   </Left>
@@ -78,6 +86,12 @@ const Contacts = () => {
       </If>
     </ContactsContainer>
   );
+};
+
+Contacts.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
 };
 
 export default Contacts;

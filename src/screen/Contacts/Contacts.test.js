@@ -8,6 +8,7 @@ jest.mock('../../hook/useService');
 
 describe('Contacts', () => {
   const mockContactsService = jest.fn();
+  const mockNavigation = { navigate: jest.fn() };
 
   beforeEach(() => {
     mockContactsService.mockResolvedValue();
@@ -19,7 +20,7 @@ describe('Contacts', () => {
   });
 
   it('should match snapshot', () => {
-    const container = render(<Contacts />);
+    const container = render(<Contacts navigation={mockNavigation} />);
 
     expect(container).toMatchSnapshot();
   });
@@ -33,7 +34,7 @@ describe('Contacts', () => {
       },
     ]);
 
-    const { getByTestId } = render(<Contacts />);
+    const { getByTestId } = render(<Contacts navigation={mockNavigation} />);
 
     await waitFor(() => getByTestId('contact_name_0'));
 
@@ -63,7 +64,7 @@ describe('Contacts', () => {
       },
     ]);
 
-    const { getByTestId } = render(<Contacts />);
+    const { getByTestId } = render(<Contacts navigation={mockNavigation} />);
 
     await waitFor(() => getByTestId('contact_name_0'));
 
@@ -78,5 +79,30 @@ describe('Contacts', () => {
     expect(getByTestId('contact_name_0').props.children).toStrictEqual(
       'Socioh User',
     );
+  });
+
+  it('should navigate to Contact screen on press of a contact', async () => {
+    mockContactsService.mockResolvedValueOnce([
+      {
+        givenName: 'Praveen',
+        familyName: 'K',
+        phoneNumbers: [{ number: '9876543210' }],
+      },
+    ]);
+
+    const { getByTestId } = render(<Contacts navigation={mockNavigation} />);
+
+    await waitFor(() => getByTestId('contact_name_0'));
+
+    await fireEvent.press(getByTestId('contact_name_0'));
+
+    expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('CONTACT', {
+      contact: {
+        givenName: 'Praveen',
+        familyName: 'K',
+        phoneNumbers: [{ number: '9876543210' }],
+      },
+    });
   });
 });
