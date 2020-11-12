@@ -10,4 +10,5 @@ export default {
   INSTAGRAM: 'instagram',
   TWITTER: 'twitter',
   CLOSE: 'close',
+  PHONE: 'phone',
 };

@@ -1,70 +1,327 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Contact should match snapshot 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "position": "absolute",
-      },
-    ]
-  }
->
-  <RNSVGSvgView
-    bbHeight={1334}
-    bbWidth={750}
-    focusable={false}
-    height={1334}
+Array [
+  <View
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
-        },
-        Object {
-          "flex": 0,
-          "height": 1334,
-          "width": 750,
+          "position": "absolute",
         },
       ]
     }
-    width={750}
   >
-    <RNSVGGroup>
-      <RNSVGCircle
-        cx={666.25}
-        cy={333.5}
-        fill={4294892136}
-        propList={
-          Array [
-            "fill",
-          ]
+    <RNSVGSvgView
+      bbHeight={1334}
+      bbWidth={750}
+      focusable={false}
+      height={1334}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 1334,
+            "width": 750,
+          },
+        ]
+      }
+      width={750}
+    >
+      <RNSVGGroup>
+        <RNSVGCircle
+          cx={666.25}
+          cy={333.5}
+          fill={4294892136}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          r={125}
+        />
+        <RNSVGCircle
+          cx={83.75}
+          cy={762.2857142857143}
+          fill={4279943103}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          r={93.75}
+        />
+        <RNSVGCircle
+          cx={650}
+          cy={1190.6000000000001}
+          fill={4279943103}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+          r={75}
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+          "paddingHorizontal": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderBottomWidth": 0.5,
+          "borderColor": "#ccc",
+          "borderLeftWidth": 0.5,
+          "borderRadius": 2,
+          "borderRightWidth": 0.5,
+          "borderTopWidth": 0.5,
+          "elevation": 3,
+          "flexWrap": "nowrap",
+          "marginBottom": 5,
+          "marginLeft": 2,
+          "marginRight": 2,
+          "marginTop": 5,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.1,
+          "shadowRadius": 1.5,
         }
-        r={125}
-      />
-      <RNSVGCircle
-        cx={83.75}
-        cy={762.2857142857143}
-        fill={4279943103}
-        propList={
-          Array [
-            "fill",
-          ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 2,
+            "flexDirection": "row",
+            "paddingBottom": 10,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 10,
+          }
         }
-        r={93.75}
-      />
-      <RNSVGCircle
-        cx={650}
-        cy={1190.6000000000001}
-        fill={4279943103}
-        propList={
-          Array [
-            "fill",
-          ]
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingVertical": 20,
+              },
+            ]
+          }
+        >
+          <Image
+            large={true}
+            source={
+              Object {
+                "testUri": "../../../src/asset/image/user.png",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 40,
+                "height": 80,
+                "width": 80,
+              }
+            }
+          />
+          <Text
+            bold={true}
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                },
+                Object {
+                  "color": "#000000",
+                  "fontSize": 24,
+                  "marginTop": 10,
+                },
+              ]
+            }
+          >
+            Praveen
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 2,
+            "flexDirection": "row",
+            "paddingBottom": 10,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 10,
+          }
         }
-        r={75}
-      />
-    </RNSVGGroup>
-  </RNSVGSvgView>
-</View>
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+              },
+            ]
+          }
+        >
+          <View
+            style={Object {}}
+          >
+            <View
+              accessible={true}
+              focusable={false}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+            >
+              <View
+                noBorder={true}
+                noIndent={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "borderBottomWidth": null,
+                    "borderColor": "#c9c9c9",
+                    "flexDirection": "row",
+                    "marginLeft": null,
+                    "paddingBottom": 10,
+                    "paddingLeft": 16,
+                    "paddingRight": 10,
+                    "paddingTop": 10,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "color": "#000",
+                        "fontFamily": "System",
+                        "fontSize": 16,
+                      }
+                    }
+                  >
+                    +919876543210
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "alignSelf": "center",
+                      "flex": 0.28,
+                      "paddingBottom": null,
+                      "paddingLeft": null,
+                      "paddingRight": null,
+                      "paddingTop": null,
+                    }
+                  }
+                >
+                  <RNGestureHandlerButton
+                    collapsable={false}
+                    onGestureEvent={[Function]}
+                    onGestureHandlerEvent={[Function]}
+                    onGestureHandlerStateChange={[Function]}
+                    onHandlerStateChange={[Function]}
+                    rippleColor={0}
+                  >
+                    <View
+                      accessible={true}
+                      style={
+                        Object {
+                          "opacity": 1,
+                        }
+                      }
+                    >
+                      <Text
+                        allowFontScaling={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": 12,
+                            },
+                            Array [
+                              Object {
+                                "color": "#000",
+                                "fontSize": 30,
+                              },
+                              Object {
+                                "alignSelf": null,
+                                "color": "#c9c8cd",
+                                "fontSize": 22,
+                              },
+                              Object {
+                                "color": "#1abfbf",
+                              },
+                            ],
+                            Object {
+                              "fontFamily": "FontAwesome",
+                              "fontStyle": "normal",
+                              "fontWeight": "normal",
+                            },
+                            Object {},
+                          ]
+                        }
+                        type="FontAwesome"
+                      >
+                        
+                      </Text>
+                    </View>
+                  </RNGestureHandlerButton>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
 `;
