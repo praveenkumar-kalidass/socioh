@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   CardItem,
@@ -22,38 +23,58 @@ import {
 } from './Contact.style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const Contact = () => {
+const Contact = ({ route }) => {
+  const { contact } = route.params;
+
   return (
     <ContactContainer>
       <Card>
         <CardItem>
           <AvatarContainer>
             <Thumbnail large source={UserAvatar} />
-            <AvatarLabel bold>Praveen</AvatarLabel>
+            <AvatarLabel bold testID="contact_name">
+              {`${contact.givenName} ${contact.familyName}`}
+            </AvatarLabel>
           </AvatarContainer>
         </CardItem>
         <CardItem>
           <ContactListContainer>
             <List>
-              <ListItem noBorder noIndent>
-                <Left>
-                  <Text>+919876543210</Text>
-                </Left>
-                <Right>
-                  <TouchableOpacity>
-                    <CallIcon
-                      type={ICON.FONT_AWESOME_FAMILY}
-                      name={ICON.PHONE}
-                    />
-                  </TouchableOpacity>
-                </Right>
-              </ListItem>
+              <For each="phone" index="index" of={contact.phoneNumbers}>
+                <ListItem noBorder noIndent key={`contact_phone_${index}`}>
+                  <Left>
+                    <Text testID={`contact_phone_${index}`}>
+                      {phone.number}
+                    </Text>
+                  </Left>
+                  <Right>
+                    <TouchableOpacity>
+                      <CallIcon
+                        type={ICON.FONT_AWESOME_FAMILY}
+                        name={ICON.PHONE}
+                      />
+                    </TouchableOpacity>
+                  </Right>
+                </ListItem>
+              </For>
             </List>
           </ContactListContainer>
         </CardItem>
       </Card>
     </ContactContainer>
   );
+};
+
+Contact.propTypes = {
+  route: PropTypes.shape({
+    params: PropTypes.shape({
+      contact: PropTypes.shape({
+        givenName: PropTypes.string,
+        familyName: PropTypes.string,
+        phoneNumbers: PropTypes.array,
+      }),
+    }),
+  }).isRequired,
 };
 
 export default wrapPattern({

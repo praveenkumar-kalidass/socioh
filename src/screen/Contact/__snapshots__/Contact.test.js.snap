@@ -165,8 +165,9 @@ Array [
                 },
               ]
             }
+            testID="contact_name"
           >
-            Praveen
+            Praveenkumar K
           </Text>
         </View>
       </View>
@@ -246,6 +247,7 @@ Array [
                         "fontSize": 16,
                       }
                     }
+                    testID="contact_phone_0"
                   >
                     +919876543210
                   </Text>
