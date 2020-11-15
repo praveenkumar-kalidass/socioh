@@ -30,3 +30,5 @@ jest.mock('react-native-contacts', () => ({
   getAll: jest.fn(),
   getContactsMatchingString: jest.fn(),
 }));
+
+jest.mock('react-native-phone-call', () => jest.fn());

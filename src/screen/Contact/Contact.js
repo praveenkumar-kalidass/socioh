@@ -10,6 +10,7 @@ import {
   Thumbnail,
   Text,
 } from 'native-base';
+import RNPhoneCall from 'react-native-phone-call';
 
 import UserAvatar from '../../asset/image/user.png';
 import { CONSTANT, ICON } from '../../constant';
@@ -25,6 +26,17 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Contact = ({ route }) => {
   const { contact } = route.params;
+
+  const handlePhoneCall = async (number) => {
+    try {
+      await RNPhoneCall({
+        number,
+        prompt: true,
+      });
+    } catch (error) {
+      console.warn('Error:', error);
+    }
+  };
 
   return (
     <ContactContainer>
@@ -50,8 +62,10 @@ const Contact = ({ route }) => {
                   <Right>
                     <TouchableOpacity>
                       <CallIcon
+                        testID={`contact_call_${phone.number}`}
                         type={ICON.FONT_AWESOME_FAMILY}
                         name={ICON.PHONE}
+                        onPress={() => handlePhoneCall(phone.number)}
                       />
                     </TouchableOpacity>
                   </Right>

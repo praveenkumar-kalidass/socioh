@@ -283,6 +283,7 @@ Array [
                     >
                       <Text
                         allowFontScaling={false}
+                        onPress={[Function]}
                         style={
                           Array [
                             Object {
@@ -311,6 +312,7 @@ Array [
                             Object {},
                           ]
                         }
+                        testID="contact_call_+919876543210"
                         type="FontAwesome"
                       >
                         

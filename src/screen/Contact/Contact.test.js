@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { fireEvent, render, act } from '@testing-library/react-native';
+import RNPhoneCall from 'react-native-phone-call';
 
 import Contact from './Contact';
 
@@ -34,5 +35,23 @@ describe('Contact', () => {
     expect(getByTestId('contact_phone_0').props.children).toStrictEqual(
       '+919876543210',
     );
+  });
+
+  it('should call when call icon is pressed', () => {
+    const { getByTestId } = render(<Contact route={mockRoute} />);
+
+    expect(getByTestId('contact_phone_0').props.children).toStrictEqual(
+      '+919876543210',
+    );
+
+    act(() => {
+      fireEvent.press(getByTestId('contact_call_+919876543210'));
+    });
+
+    expect(RNPhoneCall).toHaveBeenCalledTimes(1);
+    expect(RNPhoneCall).toHaveBeenCalledWith({
+      number: '+919876543210',
+      prompt: true,
+    });
   });
 });
