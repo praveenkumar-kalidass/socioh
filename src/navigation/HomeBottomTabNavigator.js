@@ -6,6 +6,7 @@ import TabIcon from '../component/TabIcon';
 import ContactStackNavigator from './ContactStackNavigator';
 import HomeStackNavigator from './HomeStackNavigator';
 import FeedbackStackNavigator from './FeedbackStackNavigator';
+import MessageStackNavigator from './MessageStackNavigator';
 
 const HomeBottomTab = createBottomTabNavigator();
 
@@ -22,6 +23,19 @@ export default () => (
             active={focused}
             type={ICON.MATERIAL_FAMILY}
             name={ICON.CONTACTS}
+          />
+        ),
+      }}
+    />
+    <HomeBottomTab.Screen
+      name={ROUTE.MESSAGES}
+      component={MessageStackNavigator}
+      options={{
+        tabBarIcon: ({ focused }) => (
+          <TabIcon
+            active={focused}
+            type={ICON.MATERIAL_FAMILY}
+            name={ICON.CHAT}
           />
         ),
       }}

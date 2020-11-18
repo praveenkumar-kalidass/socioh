@@ -7,4 +7,5 @@ export default {
   FEEDBACK: 'FEEDBACK',
   CONTACTS: 'CONTACTS',
   CONTACT: 'CONTACT',
+  MESSAGES: 'MESSAGES',
 };

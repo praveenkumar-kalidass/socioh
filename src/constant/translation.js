@@ -21,6 +21,7 @@ export default {
   SCREENS: {
     CONTACTS: 'Contacts',
     CONTACT: 'Contact',
+    MESSAGES: 'Messages',
   },
   INTERESTS: {
     MUSIC: 'music',
