@@ -72,4 +72,15 @@ describe('Home', () => {
     expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
     expect(mockNavigation.navigate).toHaveBeenCalledWith('LOGIN');
   });
+
+  it('should navigate to messages screen when messages link is pressed', () => {
+    const { getByTestId } = render(<Home navigation={mockNavigation} />);
+
+    act(() => {
+      fireEvent.press(getByTestId('home_messages'));
+    });
+
+    expect(mockNavigation.navigate).toHaveBeenCalledTimes(1);
+    expect(mockNavigation.navigate).toHaveBeenCalledWith('MESSAGES');
+  });
 });

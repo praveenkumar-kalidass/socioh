@@ -20,8 +20,8 @@ const Home = ({ navigation }) => {
   const [user, setUser] = useState(null);
   const { logout, getUserDetails } = useService();
 
-  const navigateToProfile = () => {
-    navigation.navigate(ROUTE.PROFILE);
+  const navigateTo = (route) => {
+    navigation.navigate(route);
   };
 
   const handleLogout = async () => {
@@ -48,7 +48,9 @@ const Home = ({ navigation }) => {
   return (
     <HomeContainer>
       <HomeLayout>
-        <AvatarContainer testID="home_avatar" onPress={navigateToProfile}>
+        <AvatarContainer
+          testID="home_avatar"
+          onPress={() => navigateTo(ROUTE.PROFILE)}>
           <Thumbnail large source={UserAvatar} />
           <If condition={Boolean(user)}>
             <AvatarLabel testID="home_user_name" bold>
@@ -64,6 +66,12 @@ const Home = ({ navigation }) => {
               name={ICON.HOME}
             />
             <NavigationLabel selected>{TRANSLATION.HOME}</NavigationLabel>
+          </UserNavigationItem>
+          <UserNavigationItem
+            testID="home_messages"
+            onPress={() => navigateTo(ROUTE.MESSAGES)}>
+            <NavigationIcon type={ICON.MATERIAL_FAMILY} name={ICON.HOME} />
+            <NavigationLabel>{TRANSLATION.SCREENS.MESSAGES}</NavigationLabel>
           </UserNavigationItem>
           <UserNavigationItem
             onPress={handleLogout}
