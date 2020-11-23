@@ -2,29 +2,35 @@
 
 exports[`MessageCard should match snapshot 1`] = `
 <View
+  highlight={true}
   style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderBottomWidth": 0.5,
-      "borderColor": "#ccc",
-      "borderLeftWidth": 0.5,
-      "borderRadius": 2,
-      "borderRightWidth": 0.5,
-      "borderTopWidth": 0.5,
-      "elevation": 3,
-      "flexWrap": "nowrap",
-      "marginBottom": 5,
-      "marginLeft": 2,
-      "marginRight": 2,
-      "marginTop": 5,
-      "shadowColor": "#000",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#ccc",
+        "borderLeftWidth": 0.5,
+        "borderRadius": 2,
+        "borderRightWidth": 0.5,
+        "borderTopWidth": 0.5,
+        "elevation": 3,
+        "flexWrap": "nowrap",
+        "marginBottom": 5,
+        "marginLeft": 2,
+        "marginRight": 2,
+        "marginTop": 5,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 1.5,
       },
-      "shadowOpacity": 0.1,
-      "shadowRadius": 1.5,
-    }
+      Object {
+        "borderColor": "#1abfbf",
+      },
+    ]
   }
 >
   <View
@@ -77,6 +83,7 @@ exports[`MessageCard should match snapshot 1`] = `
         }
       >
         <Text
+          isMargin={true}
           style={
             Array [
               Object {
@@ -164,6 +171,110 @@ exports[`MessageCard should match snapshot 1`] = `
             10
           </Text>
         </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`MessageCard should render with required params 1`] = `
+<View
+  highlight={false}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#ccc",
+        "borderLeftWidth": 0.5,
+        "borderRadius": 2,
+        "borderRightWidth": 0.5,
+        "borderTopWidth": 0.5,
+        "elevation": 3,
+        "flexWrap": "nowrap",
+        "marginBottom": 5,
+        "marginLeft": 2,
+        "marginRight": 2,
+        "marginTop": 5,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 1.5,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 2,
+        "flexDirection": "row",
+        "paddingBottom": 10,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Image
+        large={true}
+        source={
+          Object {
+            "testUri": "../../../src/asset/image/user.png",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": null,
+            "alignSelf": "center",
+            "flex": 1,
+            "marginLeft": 10,
+          }
+        }
+      >
+        <Text
+          isMargin={false}
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "System",
+                "fontSize": 16,
+              },
+              Object {
+                "fontSize": 20,
+              },
+            ]
+          }
+          testID="card_primary_text"
+        >
+          Praveenkumar
+        </Text>
       </View>
     </View>
   </View>

@@ -12,7 +12,16 @@ describe('MessageCard', () => {
         primaryText="Praveenkumar"
         secondaryText="Hello World!"
         notificationText="10"
+        highlight
       />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render with required params', () => {
+    const container = render(
+      <MessageCard image={UserAvatar} primaryText="Praveenkumar" />,
     );
 
     expect(container).toMatchSnapshot();

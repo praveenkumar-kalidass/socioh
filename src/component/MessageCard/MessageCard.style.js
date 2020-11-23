@@ -1,11 +1,15 @@
 import styled from 'styled-components/native';
-import { Badge, Text } from 'native-base';
+import { Badge, Card, Text } from 'native-base';
 
 import { COLOR, FONT, SPACING } from '../../constant';
 
+export const HighlightCard = styled(Card)`
+  ${({ highlight }) => (highlight ? `border-color: ${COLOR.PRIMARY};` : '')}
+`;
+
 export const PrimaryText = styled(Text)`
   font-size: ${FONT.SIZE_20};
-  margin-bottom: ${SPACING.SPACE_10};
+  ${({ isMargin }) => (isMargin ? `margin-bottom: ${SPACING.SPACE_10};` : '')}
 `;
 
 export const NotificationContainer = styled.View`
