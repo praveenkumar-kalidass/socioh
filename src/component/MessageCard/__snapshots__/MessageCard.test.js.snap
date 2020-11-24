@@ -3,6 +3,7 @@
 exports[`MessageCard should match snapshot 1`] = `
 <View
   highlight={true}
+  onPress={[Function]}
   style={
     Array [
       Object {
@@ -32,6 +33,7 @@ exports[`MessageCard should match snapshot 1`] = `
       },
     ]
   }
+  testID="message_card"
 >
   <View
     style={
@@ -180,6 +182,7 @@ exports[`MessageCard should match snapshot 1`] = `
 exports[`MessageCard should render with required params 1`] = `
 <View
   highlight={false}
+  onPress={[Function]}
   style={
     Array [
       Object {
@@ -207,6 +210,7 @@ exports[`MessageCard should render with required params 1`] = `
       Object {},
     ]
   }
+  testID="message_card"
 >
   <View
     style={

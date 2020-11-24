@@ -1,8 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 
 import UserAvatar from '../../asset/image/user.png';
 import MessageCard from './index';
+import { act } from 'react-test-renderer';
 
 describe('MessageCard', () => {
   it('should match snapshot', () => {
@@ -25,5 +26,23 @@ describe('MessageCard', () => {
     );
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should call onPress function prop when card is pressed', () => {
+    const mockonPress = jest.fn();
+
+    const { getByTestId } = render(
+      <MessageCard
+        image={UserAvatar}
+        primaryText="Praveenkumar"
+        onPress={mockonPress}
+      />,
+    );
+
+    act(() => {
+      fireEvent.press(getByTestId('message_card'));
+    });
+
+    expect(mockonPress).toHaveBeenCalledTimes(1);
   });
 });

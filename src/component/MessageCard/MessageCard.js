@@ -16,10 +16,14 @@ const MessageCard = ({
   secondaryText,
   notificationText,
   highlight,
+  onPress,
 }) => {
   return (
     <>
-      <HighlightCard highlight={highlight}>
+      <HighlightCard
+        testID="message_card"
+        highlight={highlight}
+        onPress={onPress}>
         <CardItem>
           <Left>
             <Thumbnail large source={image} />
@@ -55,12 +59,14 @@ MessageCard.propTypes = {
   secondaryText: PropTypes.string,
   notificationText: PropTypes.string,
   highlight: PropTypes.bool,
+  onPress: PropTypes.func,
 };
 
 MessageCard.defaultProps = {
   secondaryText: null,
   notificationText: null,
   highlight: false,
+  onPress: () => {},
 };
 
 export default MessageCard;
