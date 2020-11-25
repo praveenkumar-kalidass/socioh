@@ -29,6 +29,7 @@ const PERMISSION = {
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
+  APP_BOT: 'Socioh Bot',
   PASSWORD: 'password',
   ASYNC_STORAGE_KEY,
   SCREEN_BACKGROUND,
