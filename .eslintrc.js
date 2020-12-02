@@ -13,5 +13,6 @@ module.exports = {
   rules: {
     'react/jsx-no-undef': [2, { allowGlobals: true }],
     'react-hooks/exhaustive-deps': 'off',
+    'react/prop-types': [2],
   },
 };
