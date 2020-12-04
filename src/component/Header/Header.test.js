@@ -10,11 +10,26 @@ describe('Header', () => {
         title: 'Header',
       },
     },
+    route: {},
   };
 
   it('should match snapshot', () => {
     const container = render(<Header scene={mockScene} />);
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render title from params, if present', () => {
+    const mockSceneWithRoute = {
+      route: {
+        params: {
+          title: 'Praveen',
+        },
+      },
+    };
+
+    const { getByText } = render(<Header scene={mockSceneWithRoute} />);
+
+    expect(getByText('Praveen')).toBeDefined();
   });
 });

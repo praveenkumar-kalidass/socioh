@@ -13,6 +13,7 @@ import {
 
 const Header = ({ scene }) => {
   const { width } = useWindowDimensions();
+  const { route, descriptor } = scene;
 
   return (
     <HeaderContainer>
@@ -21,7 +22,11 @@ const Header = ({ scene }) => {
       </Svg>
       <HeaderContentContainer>
         <HeaderContent>
-          <Title>{scene.descriptor.options.title}</Title>
+          <If condition={Boolean(route.params?.title)}>
+            <Title>{route.params.title}</Title>
+            <Else />
+            <Title>{descriptor.options.title}</Title>
+          </If>
         </HeaderContent>
       </HeaderContentContainer>
     </HeaderContainer>
@@ -32,6 +37,11 @@ Header.propTypes = {
   scene: PropTypes.shape({
     descriptor: PropTypes.shape({
       options: PropTypes.shape({
+        title: PropTypes.string,
+      }),
+    }),
+    route: PropTypes.shape({
+      params: PropTypes.shape({
         title: PropTypes.string,
       }),
     }),
