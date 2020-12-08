@@ -8,4 +8,5 @@ export default {
   CONTACTS: 'CONTACTS',
   CONTACT: 'CONTACT',
   MESSAGES: 'MESSAGES',
+  MESSAGE: 'MESSAGE',
 };
