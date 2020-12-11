@@ -11,4 +11,6 @@ export default {
   TWITTER: 'twitter',
   CLOSE: 'close',
   PHONE: 'phone',
+  CARET_LET: 'caret-left',
+  CARET_RIGHT: 'caret-right',
 };

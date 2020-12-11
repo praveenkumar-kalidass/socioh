@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageTile should match snapshot 1`] = `
+<View
+  maxWidth={375}
+  received={false}
+  style={
+    Array [
+      Object {
+        "alignSelf": "flex-end",
+        "backgroundColor": "#feda68",
+        "borderBottomLeftRadius": 5,
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "marginBottom": 10,
+        "maxWidth": 375,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <View
+    received={false}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "position": "absolute",
+          "right": -10,
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      received={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 30,
+            },
+            Object {
+              "color": "#000",
+              "fontSize": 30,
+            },
+            Object {
+              "color": "#feda68",
+            },
+          ],
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      type="FontAwesome"
+    >
+      
+    </Text>
+  </View>
+  <Text
+    received={false}
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontFamily": "System",
+          "fontSize": 16,
+        },
+        Object {
+          "color": "#000000",
+        },
+      ]
+    }
+  >
+    Hi
+  </Text>
+</View>
+`;
+
+exports[`MessageTile should render styles for received message, when the message is received one 1`] = `
+<View
+  maxWidth={375}
+  received={true}
+  style={
+    Array [
+      Object {
+        "alignSelf": "flex-start",
+        "backgroundColor": "#1abfbf",
+        "borderBottomRightRadius": 5,
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "marginBottom": 10,
+        "maxWidth": 375,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <View
+    received={true}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": -10,
+          "position": "absolute",
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      received={true}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 12,
+          },
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 30,
+            },
+            Object {
+              "color": "#000",
+              "fontSize": 30,
+            },
+            Object {
+              "color": "#1abfbf",
+            },
+          ],
+          Object {
+            "fontFamily": "FontAwesome",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+      type="FontAwesome"
+    >
+      
+    </Text>
+  </View>
+  <Text
+    received={true}
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontFamily": "System",
+          "fontSize": 16,
+        },
+        Object {
+          "color": "#ffffff",
+        },
+      ]
+    }
+  >
+    Good morning!
+  </Text>
+</View>
+`;
