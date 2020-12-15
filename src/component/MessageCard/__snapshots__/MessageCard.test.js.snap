@@ -3,7 +3,6 @@
 exports[`MessageCard should match snapshot 1`] = `
 <View
   highlight={true}
-  onPress={[Function]}
   style={
     Array [
       Object {
@@ -33,21 +32,32 @@ exports[`MessageCard should match snapshot 1`] = `
       },
     ]
   }
-  testID="message_card"
 >
   <View
+    accessible={true}
+    focusable={true}
+    forwardedRef={[Function]}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#fff",
         "borderRadius": 2,
         "flexDirection": "row",
+        "opacity": 1,
         "paddingBottom": 10,
         "paddingLeft": 15,
         "paddingRight": 15,
         "paddingTop": 10,
       }
     }
+    testID="message_card"
   >
     <View
       style={
@@ -182,7 +192,6 @@ exports[`MessageCard should match snapshot 1`] = `
 exports[`MessageCard should render with required params 1`] = `
 <View
   highlight={false}
-  onPress={[Function]}
   style={
     Array [
       Object {
@@ -210,21 +219,32 @@ exports[`MessageCard should render with required params 1`] = `
       Object {},
     ]
   }
-  testID="message_card"
 >
   <View
+    accessible={true}
+    focusable={true}
+    forwardedRef={[Function]}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#fff",
         "borderRadius": 2,
         "flexDirection": "row",
+        "opacity": 1,
         "paddingBottom": 10,
         "paddingLeft": 15,
         "paddingRight": 15,
         "paddingTop": 10,
       }
     }
+    testID="message_card"
   >
     <View
       style={

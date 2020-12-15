@@ -20,11 +20,8 @@ const MessageCard = ({
 }) => {
   return (
     <>
-      <HighlightCard
-        testID="message_card"
-        highlight={highlight}
-        onPress={onPress}>
-        <CardItem>
+      <HighlightCard highlight={highlight}>
+        <CardItem testID="message_card" button onPress={onPress}>
           <Left>
             <Thumbnail large source={image} />
             <Body>
