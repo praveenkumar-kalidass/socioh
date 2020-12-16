@@ -258,4 +258,18 @@ describe('useService', () => {
       );
     });
   });
+
+  describe('getMessages', () => {
+    it('should get messages successfully', async () => {
+      const { result } = renderHook(() => useService());
+      let messages;
+
+      await act(async () => {
+        messages = await result.current.getMessages();
+      });
+
+      expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+      expect(messages).toStrictEqual(['Hi, Good morning', 'How are you?']);
+    });
+  });
 });

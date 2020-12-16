@@ -26,6 +26,8 @@ const PERMISSION = {
   AUTHORIZED: 'authorized',
 };
 
+const MESSAGES = ['Hi, Good morning', 'How are you?'];
+
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
@@ -37,4 +39,5 @@ export default {
   SOCIAL_LINK,
   OS,
   PERMISSION,
+  MESSAGES,
 };

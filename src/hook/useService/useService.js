@@ -70,7 +70,12 @@ const useService = () => {
     throw Error(ERROR.UNAUTHORIZED_TO_READ_CONTACTS);
   };
 
-  return { signUp, signIn, logout, getUserDetails, getContacts };
+  const getMessages = async () => {
+    await ajax();
+    return CONSTANT.MESSAGES;
+  };
+
+  return { signUp, signIn, logout, getUserDetails, getContacts, getMessages };
 };
 
 export default useService;
