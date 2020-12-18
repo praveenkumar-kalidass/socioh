@@ -69,7 +69,7 @@ exports[`Messages should match snapshot 1`] = `
           "paddingTop": 10,
         }
       }
-      testID="message_card"
+      testID="socioh_bot"
     >
       <View
         style={
