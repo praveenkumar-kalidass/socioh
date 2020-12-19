@@ -18,6 +18,7 @@ export default {
   HOME: 'Home',
   LOGOUT: 'Logout',
   SEARCH: 'Search',
+  WRITE_YOUR_MESSAGE: 'Write your message here...',
   SCREENS: {
     CONTACTS: 'Contacts',
     CONTACT: 'Contact',

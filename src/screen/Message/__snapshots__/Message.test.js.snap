@@ -1,3 +1,331 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Message should match snapshot 1`] = `null`;
+exports[`Message should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "paddingHorizontal": 20,
+        },
+      ]
+    }
+  >
+    <View
+      maxWidth={375}
+      received={true}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-start",
+            "backgroundColor": "#1abfbf",
+            "borderBottomRightRadius": 5,
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "marginBottom": 10,
+            "maxWidth": 375,
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+        ]
+      }
+    >
+      <View
+        received={true}
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": -10,
+              "position": "absolute",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          received={true}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#1abfbf",
+                },
+              ],
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          type="FontAwesome"
+        >
+          
+        </Text>
+      </View>
+      <Text
+        received={true}
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontFamily": "System",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#ffffff",
+            },
+          ]
+        }
+      >
+        Hi, How are you?
+      </Text>
+    </View>
+    <View
+      maxWidth={375}
+      received={false}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "backgroundColor": "#feda68",
+            "borderBottomLeftRadius": 5,
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "marginBottom": 10,
+            "maxWidth": 375,
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+        ]
+      }
+    >
+      <View
+        received={false}
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "position": "absolute",
+              "right": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          received={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#feda68",
+                },
+              ],
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          type="FontAwesome"
+        >
+          
+        </Text>
+      </View>
+      <Text
+        received={false}
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontFamily": "System",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#000000",
+            },
+          ]
+        }
+      >
+        Hi, How are you?
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+        },
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      focusable={false}
+      forwardedRef={[Function]}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderBottomWidth": 1,
+          "borderColor": "#D9D5DC",
+          "borderLeftWidth": 1,
+          "borderRadius": undefined,
+          "borderRightWidth": 1,
+          "borderTopWidth": 1,
+          "borderWidth": undefined,
+          "flexDirection": "row",
+          "marginLeft": 2,
+          "opacity": 1,
+        }
+      }
+    >
+      <TextInput
+        allowFontScaling={true}
+        editable={true}
+        placeholder="Write your message here..."
+        placeholderTextColor="#575757"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "color": "#000",
+            "flex": 1,
+            "fontSize": 17,
+            "height": 50,
+            "paddingLeft": 8,
+            "paddingRight": 5,
+            "top": 1.5,
+          }
+        }
+        underlineColorAndroid="rgba(0,0,0,0)"
+      />
+      <View
+        accessible={true}
+        focusable={false}
+        forwardedRef={[Function]}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#1abfbf",
+            "borderBottomWidth": null,
+            "borderColor": "#007aff",
+            "borderLeftWidth": null,
+            "borderRadius": 5,
+            "borderRightWidth": null,
+            "borderTopWidth": null,
+            "borderWidth": undefined,
+            "elevation": 2,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "space-between",
+            "marginVertical": 5,
+            "opacity": 1,
+            "paddingBottom": 6,
+            "paddingTop": 6,
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 12,
+              },
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 30,
+                },
+                Object {
+                  "color": "#fff",
+                  "fontSize": 24,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                  "paddingTop": 2,
+                },
+              ],
+              Object {
+                "fontFamily": "FontAwesome",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          type="FontAwesome"
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
