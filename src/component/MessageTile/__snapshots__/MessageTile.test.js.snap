@@ -83,6 +83,7 @@ exports[`MessageTile should match snapshot 1`] = `
         },
       ]
     }
+    testID="message"
   >
     Hi
   </Text>
@@ -172,6 +173,7 @@ exports[`MessageTile should render styles for received message, when the message
         },
       ]
     }
+    testID="test_message"
   >
     Good morning!
   </Text>

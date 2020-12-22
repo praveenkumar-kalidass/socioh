@@ -10,7 +10,7 @@ import {
   Message,
 } from './MessageTile.style';
 
-const MessageTile = ({ isReceived, message }) => {
+const MessageTile = ({ isReceived, message, testID }) => {
   const { width } = useWindowDimensions();
   const pointer = isReceived ? ICON.CARET_LET : ICON.CARET_RIGHT;
 
@@ -23,7 +23,9 @@ const MessageTile = ({ isReceived, message }) => {
           received={isReceived}
         />
       </IconContainer>
-      <Message received={isReceived}>{message}</Message>
+      <Message testID={testID} received={isReceived}>
+        {message}
+      </Message>
     </TileContainer>
   );
 };
@@ -31,10 +33,12 @@ const MessageTile = ({ isReceived, message }) => {
 MessageTile.propTypes = {
   isReceived: PropTypes.bool,
   message: PropTypes.string.isRequired,
+  testID: PropTypes.string,
 };
 
 MessageTile.defaultProps = {
   isReceived: false,
+  testID: 'message',
 };
 
 export default MessageTile;

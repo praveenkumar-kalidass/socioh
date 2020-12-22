@@ -106,6 +106,7 @@ exports[`Message should match snapshot 1`] = `
             },
           ]
         }
+        testID="message"
       >
         Hi, How are you?
       </Text>
@@ -192,6 +193,7 @@ exports[`Message should match snapshot 1`] = `
             },
           ]
         }
+        testID="message"
       >
         Hi, How are you?
       </Text>

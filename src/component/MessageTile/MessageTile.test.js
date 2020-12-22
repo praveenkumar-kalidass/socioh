@@ -12,7 +12,7 @@ describe('MessageTile', () => {
 
   it('should render styles for received message, when the message is received one', () => {
     const container = render(
-      <MessageTile isReceived message="Good morning!" />,
+      <MessageTile testID="test_message" isReceived message="Good morning!" />,
     );
 
     expect(container).toMatchSnapshot();
