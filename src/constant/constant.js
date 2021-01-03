@@ -26,7 +26,10 @@ const PERMISSION = {
   AUTHORIZED: 'authorized',
 };
 
-const MESSAGES = ['Hi, Good morning', 'How are you?'];
+const MESSAGES = {
+  GREETINGS: ['Hi, Good morning', 'How are you?'],
+  PARDON: 'Pardon?',
+};
 
 export default {
   APP_NAME: 'socioh',

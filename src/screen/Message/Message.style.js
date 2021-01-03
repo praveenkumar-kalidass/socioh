@@ -7,7 +7,7 @@ export const MessageContainer = styled.View`
   flex: 1;
 `;
 
-export const MessageGrid = styled.View`
+export const MessageGrid = styled.ScrollView`
   flex: 1;
   padding-horizontal: ${SPACING.SPACE_20};
 `;

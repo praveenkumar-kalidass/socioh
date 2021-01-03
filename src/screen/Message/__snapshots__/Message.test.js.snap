@@ -12,7 +12,7 @@ exports[`Message should match snapshot 1`] = `
     ]
   }
 >
-  <View
+  <RCTScrollView
     style={
       Array [
         Object {
@@ -23,7 +23,9 @@ exports[`Message should match snapshot 1`] = `
         },
       ]
     }
-  />
+  >
+    <View />
+  </RCTScrollView>
   <View
     style={
       Array [
@@ -64,6 +66,7 @@ exports[`Message should match snapshot 1`] = `
       <TextInput
         allowFontScaling={true}
         editable={true}
+        onChangeText={[Function]}
         placeholder="Write your message here..."
         placeholderTextColor="#575757"
         rejectResponderTermination={true}
@@ -78,11 +81,13 @@ exports[`Message should match snapshot 1`] = `
             "top": 1.5,
           }
         }
+        testID="message_input"
         underlineColorAndroid="rgba(0,0,0,0)"
+        value=""
       />
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         forwardedRef={[Function]}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -117,6 +122,7 @@ exports[`Message should match snapshot 1`] = `
             "shadowRadius": undefined,
           }
         }
+        testID="message_send"
       >
         <Text
           allowFontScaling={false}

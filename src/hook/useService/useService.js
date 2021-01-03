@@ -72,7 +72,7 @@ const useService = () => {
 
   const getMessages = async () => {
     await ajax();
-    return CONSTANT.MESSAGES;
+    return CONSTANT.MESSAGES.GREETINGS;
   };
 
   return { signUp, signIn, logout, getUserDetails, getContacts, getMessages };
