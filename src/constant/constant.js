@@ -29,6 +29,10 @@ const PERMISSION = {
 const MESSAGES = {
   GREETINGS: ['Hi, Good morning', 'How are you?'],
   PARDON: 'Pardon?',
+  LIST: [
+    { name: 'Tony Stark', count: '2' },
+    { name: 'Captain America', count: '5' },
+  ],
 };
 
 export default {

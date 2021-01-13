@@ -75,7 +75,20 @@ const useService = () => {
     return CONSTANT.MESSAGES.GREETINGS;
   };
 
-  return { signUp, signIn, logout, getUserDetails, getContacts, getMessages };
+  const getMessageList = async () => {
+    await ajax();
+    return CONSTANT.MESSAGES.LIST;
+  };
+
+  return {
+    signUp,
+    signIn,
+    logout,
+    getUserDetails,
+    getContacts,
+    getMessages,
+    getMessageList,
+  };
 };
 
 export default useService;

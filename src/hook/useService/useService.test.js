@@ -272,4 +272,21 @@ describe('useService', () => {
       expect(messages).toStrictEqual(['Hi, Good morning', 'How are you?']);
     });
   });
+
+  describe('getMessageList', () => {
+    it('should get message list successfully', async () => {
+      const { result } = renderHook(() => useService());
+      let messages;
+
+      await act(async () => {
+        messages = await result.current.getMessageList();
+      });
+
+      expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+      expect(messages).toStrictEqual([
+        { name: 'Tony Stark', count: '2' },
+        { name: 'Captain America', count: '5' },
+      ]);
+    });
+  });
 });
