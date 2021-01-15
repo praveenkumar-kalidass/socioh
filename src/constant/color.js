@@ -9,4 +9,5 @@ export default {
   FACEBOOK: '#1a77f2',
   INSTAGRAM: '#c136a6',
   TWITTER: '#209dea',
+  GRAY: '#777777',
 };

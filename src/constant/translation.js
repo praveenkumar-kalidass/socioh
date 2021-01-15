@@ -14,6 +14,7 @@ export default {
   SIGN_IN: 'Sign in',
   I_AM_SOCIOH_USER: 'Hey there! I am a socioh user.',
   MY_INTERESTS: 'My interests',
+  MY_FRIENDS: 'My friends',
   FEEDBACK: 'Feedback',
   HOME: 'Home',
   LOGOUT: 'Logout',
