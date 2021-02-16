@@ -14,4 +14,5 @@ export default {
   CARET_LET: 'caret-left',
   CARET_RIGHT: 'caret-right',
   SEND: 'send',
+  PHOTO: 'photo',
 };

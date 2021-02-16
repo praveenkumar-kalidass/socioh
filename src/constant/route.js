@@ -9,4 +9,5 @@ export default {
   CONTACT: 'CONTACT',
   MESSAGES: 'MESSAGES',
   MESSAGE: 'MESSAGE',
+  PHOTOS: 'PHOTOS',
 };

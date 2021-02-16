@@ -8,6 +8,7 @@ import ContactStackNavigator from './ContactStackNavigator';
 import HomeStackNavigator from './HomeStackNavigator';
 import FeedbackStackNavigator from './FeedbackStackNavigator';
 import MessageStackNavigator from './MessageStackNavigator';
+import PhotosStackNavigator from './PhotosStackNavigator';
 
 const HomeBottomTab = createBottomTabNavigator();
 
@@ -50,6 +51,19 @@ export default () => (
             active={focused}
             type={ICON.MATERIAL_FAMILY}
             name={ICON.HOME}
+          />
+        ),
+      }}
+    />
+    <HomeBottomTab.Screen
+      name={ROUTE.PHOTOS}
+      component={PhotosStackNavigator}
+      options={{
+        tabBarIcon: ({ focused }) => (
+          <TabIcon
+            active={focused}
+            type={ICON.FONT_AWESOME_FAMILY}
+            name={ICON.PHOTO}
           />
         ),
       }}

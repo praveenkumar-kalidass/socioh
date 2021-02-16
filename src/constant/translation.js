@@ -24,6 +24,7 @@ export default {
     CONTACTS: 'Contacts',
     CONTACT: 'Contact',
     MESSAGES: 'Messages',
+    PHOTOS: 'Photos',
   },
   INTERESTS: {
     MUSIC: 'music',
