@@ -68,10 +68,22 @@ const Home = ({ navigation }) => {
             <NavigationLabel selected>{TRANSLATION.HOME}</NavigationLabel>
           </UserNavigationItem>
           <UserNavigationItem
+            testID="home_contacts"
+            onPress={() => navigateTo(ROUTE.CONTACTS)}>
+            <NavigationIcon type={ICON.MATERIAL_FAMILY} name={ICON.CONTACTS} />
+            <NavigationLabel>{TRANSLATION.SCREENS.CONTACTS}</NavigationLabel>
+          </UserNavigationItem>
+          <UserNavigationItem
             testID="home_messages"
             onPress={() => navigateTo(ROUTE.MESSAGES)}>
             <NavigationIcon type={ICON.MATERIAL_FAMILY} name={ICON.HOME} />
             <NavigationLabel>{TRANSLATION.SCREENS.MESSAGES}</NavigationLabel>
+          </UserNavigationItem>
+          <UserNavigationItem
+            testID="home_contacts"
+            onPress={() => navigateTo(ROUTE.PHOTOS)}>
+            <NavigationIcon type={ICON.MATERIAL_FAMILY} name={ICON.PHOTO} />
+            <NavigationLabel>{TRANSLATION.SCREENS.PHOTOS}</NavigationLabel>
           </UserNavigationItem>
           <UserNavigationItem
             onPress={handleLogout}
