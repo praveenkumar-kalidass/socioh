@@ -236,6 +236,8 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
+  - react-native-cameraroll (4.0.2):
+    - React-Core
   - react-native-contacts (6.0.3):
     - React-Core
   - react-native-safe-area-context (3.1.8):
@@ -357,6 +359,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - "react-native-cameraroll (from `../node_modules/@react-native-community/cameraroll`)"
   - react-native-contacts (from `../node_modules/react-native-contacts`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -425,6 +428,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-cameraroll:
+    :path: "../node_modules/@react-native-community/cameraroll"
   react-native-contacts:
     :path: "../node_modules/react-native-contacts"
   react-native-safe-area-context:
@@ -495,6 +500,7 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
+  react-native-cameraroll: 1965db75c851b15e77a22ca0ac78e32af6b571ae
   react-native-contacts: 81059c05ae61884092dade66536987274b81aed9
   react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-webview: 4e96d493f9f90ba4f03b28933f30b2964df07e39
@@ -520,4 +526,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a05740c6842ee938cf86f78d4a5cbf6b9121556c
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
