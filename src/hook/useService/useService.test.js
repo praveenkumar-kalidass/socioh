@@ -1,7 +1,9 @@
+import { Platform, PermissionsAndroid } from 'react-native';
 import { act, renderHook } from '@testing-library/react-hooks';
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
 import RNContacts from 'react-native-contacts';
+import CameraRoll from '@react-native-community/cameraroll';
 
 import useAjax from '../useAjax';
 import useUser from '../useUser';
@@ -287,6 +289,79 @@ describe('useService', () => {
         { name: 'Tony Stark', count: '2' },
         { name: 'Captain America', count: '5' },
       ]);
+    });
+  });
+
+  describe('getPhotos', () => {
+    describe('ios', () => {
+      beforeEach(() => {
+        Platform.OS = 'ios';
+      });
+
+      it('should return photos successfully', async () => {
+        CameraRoll.getPhotos.mockResolvedValueOnce({
+          edges: [{ node: { image: { uri: 'ph://123' } } }],
+        });
+
+        const { result } = renderHook(() => useService());
+        let photos;
+
+        await act(async () => {
+          photos = await result.current.getPhotos();
+        });
+
+        expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+        expect(photos).toStrictEqual([{ uri: 'ph://123' }]);
+      });
+
+      it('should throw error when get photos fails', async () => {
+        CameraRoll.getPhotos.mockRejectedValueOnce('ERROR');
+
+        const { result } = renderHook(() => useService());
+
+        await expect(result.current.getPhotos()).rejects.toStrictEqual('ERROR');
+      });
+    });
+
+    describe('android', () => {
+      beforeEach(() => {
+        Platform.OS = 'android';
+      });
+
+      it('should get photos when check permission returns true', async () => {
+        jest.spyOn(PermissionsAndroid, 'check').mockResolvedValueOnce(true);
+        CameraRoll.getPhotos.mockResolvedValueOnce({
+          edges: [{ node: { image: { uri: 'file://123' } } }],
+        });
+
+        const { result } = renderHook(() => useService());
+
+        let photos;
+        await act(async () => {
+          photos = await result.current.getPhotos();
+        });
+
+        expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+        expect(photos).toStrictEqual([{ uri: 'file://123' }]);
+      });
+
+      it('should request for permission when check permission returns false', async () => {
+        jest.spyOn(PermissionsAndroid, 'check').mockResolvedValueOnce(false);
+        jest.spyOn(PermissionsAndroid, 'request').mockResolvedValueOnce();
+        CameraRoll.getPhotos.mockResolvedValueOnce({
+          edges: [{ node: { image: { uri: 'file://123' } } }],
+        });
+
+        const { result } = renderHook(() => useService());
+
+        let photos;
+        await act(async () => {
+          photos = await result.current.getPhotos();
+        });
+
+        expect(ajaxMock.ajax).toHaveBeenCalledTimes(1);
+        expect(photos).toStrictEqual([{ uri: 'file://123' }]);
+      });
     });
   });
 });

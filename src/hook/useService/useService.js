@@ -1,6 +1,8 @@
+import { PermissionsAndroid, Platform } from 'react-native';
 import * as Keychain from 'react-native-keychain';
 import AsyncStorage from '@react-native-community/async-storage';
 import RNContacts from 'react-native-contacts';
+import CameraRoll from '@react-native-community/cameraroll';
 
 import { CONSTANT, ERROR, TRANSLATION } from '../../constant';
 import useAjax from '../useAjax';
@@ -80,6 +82,22 @@ const useService = () => {
     return CONSTANT.MESSAGES.LIST;
   };
 
+  const getPhotos = async () => {
+    if (Platform.OS === CONSTANT.OS.ANDROID) {
+      const permission = PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE;
+      const hasPermission = await PermissionsAndroid.check(permission);
+      if (!hasPermission) {
+        await PermissionsAndroid.request(permission);
+      }
+    }
+    const gallery = await CameraRoll.getPhotos({
+      first: 20,
+      assetType: CONSTANT.CAMERA_ROLL.PHOTOS,
+    });
+    await ajax();
+    return gallery.edges.map((image) => image.node.image);
+  };
+
   return {
     signUp,
     signIn,
@@ -88,6 +106,7 @@ const useService = () => {
     getContacts,
     getMessages,
     getMessageList,
+    getPhotos,
   };
 };
 

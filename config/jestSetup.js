@@ -32,3 +32,7 @@ jest.mock('react-native-contacts', () => ({
 }));
 
 jest.mock('react-native-phone-call', () => jest.fn());
+
+jest.mock('@react-native-community/cameraroll', () => ({
+  getPhotos: jest.fn(),
+}));

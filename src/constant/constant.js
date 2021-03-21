@@ -35,6 +35,10 @@ const MESSAGES = {
   ],
 };
 
+const CAMERA_ROLL = {
+  PHOTOS: 'Photos',
+};
+
 export default {
   APP_NAME: 'socioh',
   APP_DESCRIPTION: 'A Mock mobile app for social network',
@@ -47,4 +51,5 @@ export default {
   OS,
   PERMISSION,
   MESSAGES,
+  CAMERA_ROLL,
 };
