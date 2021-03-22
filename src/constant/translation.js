@@ -20,6 +20,7 @@ export default {
   LOGOUT: 'Logout',
   SEARCH: 'Search',
   WRITE_YOUR_MESSAGE: 'Write your message here...',
+  NO_PHOTOS: 'No Photos available',
   SCREENS: {
     CONTACTS: 'Contacts',
     CONTACT: 'Contact',

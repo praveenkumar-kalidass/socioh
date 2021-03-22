@@ -73,109 +73,26 @@ exports[`Photos should match snapshot 1`] = `
           style={
             Array [
               Object {
-                "marginVertical": 10,
-                "width": "30%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "justifyContent": "center",
               },
             ]
           }
         >
-          <Image
-            source={
-              Object {
-                "testUri": "../../../src/asset/image/praveen.jpeg",
-              }
-            }
+          <Text
             style={
               Array [
                 Object {
-                  "aspectRatio": 1,
-                  "height": "auto",
-                  "width": "auto",
+                  "textAlign": "center",
                 },
               ]
             }
-          />
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "marginVertical": 10,
-                "width": "30%",
-              },
-            ]
-          }
-        >
-          <Image
-            source={
-              Object {
-                "testUri": "../../../src/asset/image/user.png",
-              }
-            }
-            style={
-              Array [
-                Object {
-                  "aspectRatio": 1,
-                  "height": "auto",
-                  "width": "auto",
-                },
-              ]
-            }
-          />
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "marginVertical": 10,
-                "width": "30%",
-              },
-            ]
-          }
-        >
-          <Image
-            source={
-              Object {
-                "testUri": "../../../src/asset/image/socioh_bot.jpg",
-              }
-            }
-            style={
-              Array [
-                Object {
-                  "aspectRatio": 1,
-                  "height": "auto",
-                  "width": "auto",
-                },
-              ]
-            }
-          />
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "marginVertical": 10,
-                "width": "30%",
-              },
-            ]
-          }
-        >
-          <Image
-            source={
-              Object {
-                "testUri": "../../../src/asset/image/praveen.jpeg",
-              }
-            }
-            style={
-              Array [
-                Object {
-                  "aspectRatio": 1,
-                  "height": "auto",
-                  "width": "auto",
-                },
-              ]
-            }
-          />
+            testID="photos_empty"
+          >
+            No Photos available
+          </Text>
         </View>
       </View>
     </View>

@@ -24,3 +24,12 @@ export const GalleryItem = styled.Image`
   height: auto;
   width: auto;
 `;
+
+export const NoPhotosContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+`;
+
+export const NoPhotos = styled.Text`
+  text-align: center;
+`;
