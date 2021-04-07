@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ScrollView } from 'react-native';
 import { Card, CardItem } from 'native-base';
 
 import useService from '../../hook/useService';
@@ -33,23 +34,25 @@ const Photos = () => {
     <PhotosContainer>
       <Card>
         <CardItem cardBody>
-          <Gallery>
-            <If condition={!images.length}>
-              <NoPhotosContainer>
-                <NoPhotos testID="photos_empty">
-                  {TRANSLATION.NO_PHOTOS}
-                </NoPhotos>
-              </NoPhotosContainer>
-            </If>
-            <For each="image" index="index" of={images}>
-              <GalleryGrid key={`photo_${index}`}>
-                <GalleryItem
-                  testID={`photo_${index}`}
-                  source={{ uri: image.uri }}
-                />
-              </GalleryGrid>
-            </For>
-          </Gallery>
+          <ScrollView>
+            <Gallery>
+              <If condition={!images.length}>
+                <NoPhotosContainer>
+                  <NoPhotos testID="photos_empty">
+                    {TRANSLATION.NO_PHOTOS}
+                  </NoPhotos>
+                </NoPhotosContainer>
+              </If>
+              <For each="image" index="index" of={images}>
+                <GalleryGrid key={`photo_${index}`}>
+                  <GalleryItem
+                    testID={`photo_${index}`}
+                    source={{ uri: image.uri }}
+                  />
+                </GalleryGrid>
+              </For>
+            </Gallery>
+          </ScrollView>
         </CardItem>
       </Card>
     </PhotosContainer>

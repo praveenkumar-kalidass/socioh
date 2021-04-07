@@ -54,47 +54,51 @@ exports[`Photos should match snapshot 1`] = `
         }
       }
     >
-      <View
-        style={
-          Array [
-            Object {
-              "flexDirection": "row",
-              "flexWrap": "wrap",
-              "justifyContent": "space-between",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 20,
-              "paddingTop": 20,
-            },
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "flexBasis": 0,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Text
+      <RCTScrollView>
+        <View>
+          <View
             style={
               Array [
                 Object {
-                  "textAlign": "center",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-between",
+                  "paddingBottom": 20,
+                  "paddingLeft": 20,
+                  "paddingRight": 20,
+                  "paddingTop": 20,
                 },
               ]
             }
-            testID="photos_empty"
           >
-            No Photos available
-          </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "justifyContent": "center",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "textAlign": "center",
+                    },
+                  ]
+                }
+                testID="photos_empty"
+              >
+                No Photos available
+              </Text>
+            </View>
+          </View>
         </View>
-      </View>
+      </RCTScrollView>
     </View>
   </View>
 </View>
