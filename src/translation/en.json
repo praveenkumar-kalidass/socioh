@@ -1,0 +1,41 @@
+{
+  "LETS_GO": "Lets go!",
+  "DONT_HAVE_ACCOUNT": "Don't have an account?",
+  "SIGN_UP_HERE": "Sign-up here",
+  "YOUR_NAME": "Your name",
+  "NAME": "Name",
+  "YOUR_EMAIL": "Your e-mail",
+  "EMAIL": "E-mail",
+  "CREATE_PASSWORD": "Create password",
+  "PASSWORD": "Password",
+  "TERMS_AND_CONDITIONS": "I agree with terms & conditions",
+  "SIGN_UP": "Sign up",
+  "YOUR_PASSWORD": "Your password",
+  "SIGN_IN": "Sign in",
+  "I_AM_SOCIOH_USER": "Hey there! I am a socioh user.",
+  "MY_INTERESTS": "My interests",
+  "MY_FRIENDS": "My friends",
+  "FEEDBACK": "Feedback",
+  "HOME": "Home",
+  "LOGOUT": "Logout",
+  "SEARCH": "Search",
+  "WRITE_YOUR_MESSAGE": "Write your message here...",
+  "NO_PHOTOS": "No Photos available",
+  "SCREENS": {
+    "CONTACTS": "Contacts",
+    "CONTACT": "Contact",
+    "MESSAGES": "Messages",
+    "PHOTOS": "Photos"
+  },
+  "INTERESTS": {
+    "MUSIC": "music",
+    "FOOD": "food",
+    "CULTURE": "culture",
+    "DRINKS": "drinks",
+    "SPORT": "sport",
+    "TRAVEL": "travel",
+    "FUN": "fun",
+    "BUSINESS": "business",
+    "ART": "art"
+  }
+}
