@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import ScreenLoader from '../../component/ScreenLoader/ScreenLoader';
+import ScreenLoader from 'component/ScreenLoader/ScreenLoader';
 import LoaderContext from './Loader.context';
 
 const LoaderProvider = ({ children }) => {

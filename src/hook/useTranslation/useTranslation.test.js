@@ -3,11 +3,11 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import TranslationProvider from './Translation.provider';
 import useTranslation from './index';
 
-jest.mock('../../translation/en.json', () => ({
+jest.mock('translation/en.json', () => ({
   TEST_TRANSLATE: 'Test english translation',
 }));
 
-jest.mock('../../translation/ta.json', () => ({
+jest.mock('translation/ta.json', () => ({
   TEST_TRANSLATE: 'Test tamil translation',
 }));
 

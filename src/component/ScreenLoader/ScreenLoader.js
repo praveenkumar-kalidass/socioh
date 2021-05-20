@@ -3,7 +3,7 @@ import { Modal } from 'react-native';
 import PropTypes from 'prop-types';
 import { Spinner } from 'native-base';
 
-import { COLOR } from '../../constant';
+import { COLOR } from 'constant';
 import { OverlayContainer } from './ScreenLoader.style';
 
 const ScreenLoader = ({ isVisible }) => (

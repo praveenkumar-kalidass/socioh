@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import RNContacts from 'react-native-contacts';
 import CameraRoll from '@react-native-community/cameraroll';
 
-import { CONSTANT, ERROR, TRANSLATION } from '../../constant';
+import { CONSTANT, ERROR, TRANSLATION } from 'constant';
 import useAjax from '../useAjax';
 import useUser from '../useUser';
 

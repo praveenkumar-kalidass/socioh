@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { CONSTANT } from '../constant';
-import { Background1, Background2 } from '../component/Background';
+import { CONSTANT } from 'constant';
+import { Background1, Background2 } from 'component/Background';
 
 const wrapPattern = ({
   Component,

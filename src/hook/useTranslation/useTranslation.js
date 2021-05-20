@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
 
 import TranslationContext from './Translation.context';
-import en from '../../translation/en.json';
-import ta from '../../translation/ta.json';
+import en from 'translation/en.json';
+import ta from 'translation/ta.json';
 
 const useTranslation = () => {
   const [translations] = useState({ en, ta });

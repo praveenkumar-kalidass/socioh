@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useWindowDimensions } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
-import { COLOR } from '../../constant';
+import { COLOR } from 'constant';
 import {
   HeaderContainer,
   HeaderContent,

@@ -3,7 +3,7 @@ import { Modal } from 'react-native';
 import PropTypes from 'prop-types';
 import RNWebView from 'react-native-webview';
 
-import { ICON } from '../../constant';
+import { ICON } from 'constant';
 import {
   ModalContainer,
   ModalHeader,

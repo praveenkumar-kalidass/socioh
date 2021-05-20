@@ -2,7 +2,7 @@ import React from 'react';
 import { useWindowDimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { ICON } from '../../constant';
+import { ICON } from 'constant';
 import {
   TileContainer,
   IconContainer,
