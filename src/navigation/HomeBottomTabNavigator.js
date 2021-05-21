@@ -2,8 +2,8 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { ROUTE, ICON } from '../constant';
-import TabIcon from '../component/TabIcon';
+import { ROUTE, ICON } from 'constant';
+import TabIcon from 'component/TabIcon';
 import ContactStackNavigator from './ContactStackNavigator';
 import HomeStackNavigator from './HomeStackNavigator';
 import FeedbackStackNavigator from './FeedbackStackNavigator';

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Button, CheckBox, Item, Text } from 'native-base';
 
-import { COLOR, FONT, SPACING } from '../../constant';
+import { COLOR, FONT, SPACING } from 'constant';
 
 export const SignupGrid = styled.KeyboardAvoidingView`
   flex: 1;

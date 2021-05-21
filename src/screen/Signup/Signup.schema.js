@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-import { TRANSLATION } from '../../constant';
+import { TRANSLATION } from 'constant';
 
 export const SCHEMA = Joi.object({
   name: Joi.string().alphanum().min(3).max(30).required(),

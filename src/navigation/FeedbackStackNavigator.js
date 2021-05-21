@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { ROUTE, COLOR, TRANSLATION } from '../constant';
-import Header from '../component/Header';
-import Feedback from '../screen/Feedback';
+import { ROUTE, COLOR, TRANSLATION } from 'constant';
+import Header from 'component/Header';
+import Feedback from 'screen/Feedback';
 
 const FeedbackStack = createStackNavigator();
 

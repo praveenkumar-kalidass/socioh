@@ -1,4 +1,4 @@
-import { COLOR, CONSTANT, ICON } from '../../constant';
+import { COLOR, CONSTANT, ICON } from 'constant';
 
 export const AUTHOR_SOCIAL_LINKS = [
   {

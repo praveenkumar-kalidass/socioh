@@ -13,9 +13,9 @@ import {
   Item,
 } from 'native-base';
 
-import UserAvatar from '../../asset/image/user.png';
-import { COLOR, ROUTE, TRANSLATION } from '../../constant';
-import useService from '../../hook/useService';
+import UserAvatar from 'asset/image/user.png';
+import { COLOR, ROUTE, TRANSLATION } from 'constant';
+import useService from 'hook/useService';
 import { ContactDetails, ContactsContainer } from './Contacts.style';
 
 const Contacts = ({ navigation }) => {

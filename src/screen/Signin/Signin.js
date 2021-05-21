@@ -3,10 +3,10 @@ import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { Card, CardItem, Input } from 'native-base';
 
-import { TRANSLATION, CONSTANT, ROUTE } from '../../constant';
-import wrapPattern from '../../helper/wrapPattern';
-import validateFields from '../../helper/validateFields';
-import useService from '../../hook/useService';
+import { TRANSLATION, CONSTANT, ROUTE } from 'constant';
+import wrapPattern from 'helper/wrapPattern';
+import validateFields from 'helper/validateFields';
+import useService from 'hook/useService';
 import { SCHEMA, INITIAL_STATE, FIELDS } from './Signin.schema';
 import {
   SigninGrid,

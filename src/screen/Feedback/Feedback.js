@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Card, Col, Grid } from 'native-base';
 
-import Praveen from '../../asset/image/praveen.jpeg';
-import { CONSTANT } from '../../constant';
-import WebView from '../../component/WebView';
+import Praveen from 'asset/image/praveen.jpeg';
+import { CONSTANT } from 'constant';
+import WebView from 'component/WebView';
 import {
   FeedbackContainer,
   Avatar,

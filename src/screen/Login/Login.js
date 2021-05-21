@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CONSTANT, ICON, ROUTE, TRANSLATION } from '../../constant';
+import { CONSTANT, ICON, ROUTE, TRANSLATION } from 'constant';
 import {
   LoginContainer,
   Title,

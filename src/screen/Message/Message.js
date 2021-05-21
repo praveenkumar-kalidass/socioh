@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Input, Item, Icon } from 'native-base';
 
-import { CONSTANT, ICON, TRANSLATION } from '../../constant';
-import MessageTile from '../../component/MessageTile';
-import useService from '../../hook/useService';
+import { CONSTANT, ICON, TRANSLATION } from 'constant';
+import MessageTile from 'component/MessageTile';
+import useService from 'hook/useService';
 import {
   InputContainer,
   MessageContainer,

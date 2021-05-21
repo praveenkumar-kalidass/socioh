@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { ROUTE, COLOR } from '../constant';
-import Home from '../screen/Home';
-import Profile from '../screen/Profile';
+import { ROUTE, COLOR } from 'constant';
+import Home from 'screen/Home';
+import Profile from 'screen/Profile';
 
 const HomeStack = createStackNavigator();
 

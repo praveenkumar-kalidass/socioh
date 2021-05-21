@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-import { SPACING } from '../../constant';
+import { SPACING } from 'constant';
 
 export const PhotosContainer = styled.View`
   flex: 1;

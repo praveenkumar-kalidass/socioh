@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { ROUTE, COLOR } from '../constant';
-import Login from '../screen/Login';
-import Signin from '../screen/Signin';
-import Signup from '../screen/Signup';
+import { ROUTE, COLOR } from 'constant';
+import Login from 'screen/Login';
+import Signin from 'screen/Signin';
+import Signup from 'screen/Signup';
 import HomeBottomTabNavigator from './HomeBottomTabNavigator';
 
 const Stack = createStackNavigator();

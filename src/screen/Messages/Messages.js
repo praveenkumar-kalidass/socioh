@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import MessageCard from '../../component/MessageCard';
-import SociohBot from '../../asset/image/socioh_bot.jpg';
-import User from '../../asset/image/user.png';
-import { CONSTANT, ROUTE, TRANSLATION } from '../../constant';
+import MessageCard from 'component/MessageCard';
+import SociohBot from 'asset/image/socioh_bot.jpg';
+import User from 'asset/image/user.png';
+import { CONSTANT, ROUTE, TRANSLATION } from 'constant';
 import { FriendsTitle, MessagesContainer } from './Messages.style';
-import useService from '../../hook/useService';
+import useService from 'hook/useService';
 
 const Messages = ({ navigation }) => {
   const [messageList, setMessageList] = useState([]);

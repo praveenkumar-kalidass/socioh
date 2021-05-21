@@ -12,9 +12,9 @@ import {
 } from 'native-base';
 import RNPhoneCall from 'react-native-phone-call';
 
-import UserAvatar from '../../asset/image/user.png';
-import { CONSTANT, ICON } from '../../constant';
-import wrapPattern from '../../helper/wrapPattern';
+import UserAvatar from 'asset/image/user.png';
+import { CONSTANT, ICON } from 'constant';
+import wrapPattern from 'helper/wrapPattern';
 import {
   ContactContainer,
   AvatarContainer,

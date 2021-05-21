@@ -1,10 +1,10 @@
 import React from 'react';
 import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
 
-import useService from '../../hook/useService';
+import useService from 'hook/useService';
 import Message from './index';
 
-jest.mock('../../hook/useService');
+jest.mock('hook/useService');
 
 describe('Message', () => {
   const mockMessagesService = jest.fn();

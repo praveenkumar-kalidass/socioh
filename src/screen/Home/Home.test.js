@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, act, fireEvent, waitFor } from '@testing-library/react-native';
 
-import useService from '../../hook/useService';
+import useService from 'hook/useService';
 import Home from './index';
 
 const serviceMock = {
@@ -9,7 +9,7 @@ const serviceMock = {
   logout: jest.fn(),
 };
 
-jest.mock('../../hook/useService');
+jest.mock('hook/useService');
 
 describe('Home', () => {
   const mockNavigation = { navigate: jest.fn() };

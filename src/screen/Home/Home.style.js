@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Text, List, ListItem, Icon } from 'native-base';
 
-import { COLOR, FONT, SPACING } from '../../constant';
+import { COLOR, FONT, SPACING } from 'constant';
 
 export const HomeContainer = styled.View`
   background-color: ${COLOR.PALE_GREEN};

@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 
-import useService from '../../hook/useService';
+import useService from 'hook/useService';
 import Profile from './index';
 
 const serviceMock = {
   getUserDetails: jest.fn(),
 };
 
-jest.mock('../../hook/useService');
+jest.mock('hook/useService');
 
 describe('Profile', () => {
   const mockNavigation = { navigate: jest.fn() };

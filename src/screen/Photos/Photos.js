@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { ScrollView } from 'react-native';
 import { Card, CardItem } from 'native-base';
 
-import useService from '../../hook/useService';
-import { TRANSLATION } from '../../constant';
+import useService from 'hook/useService';
+import { TRANSLATION } from 'constant';
 import {
   Gallery,
   GalleryGrid,

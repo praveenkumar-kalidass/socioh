@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { ROUTE, COLOR, TRANSLATION } from '../constant';
-import Header from '../component/Header';
-import Messages from '../screen/Messages';
-import Message from '../screen/Message';
+import { ROUTE, COLOR, TRANSLATION } from 'constant';
+import Header from 'component/Header';
+import Messages from 'screen/Messages';
+import Message from 'screen/Message';
 
 const MessageStack = createStackNavigator();
 

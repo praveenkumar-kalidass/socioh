@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { ROUTE, COLOR, TRANSLATION } from '../constant';
-import Header from '../component/Header';
-import Photos from '../screen/Photos';
+import { ROUTE, COLOR, TRANSLATION } from 'constant';
+import Header from 'component/Header';
+import Photos from 'screen/Photos';
 
 const PhotosStack = createStackNavigator();
 

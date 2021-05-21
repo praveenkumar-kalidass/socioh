@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Thumbnail } from 'native-base';
 
-import UserAvatar from '../../asset/image/user.png';
-import useService from '../../hook/useService';
-import { ICON, ROUTE, TRANSLATION } from '../../constant';
+import UserAvatar from 'asset/image/user.png';
+import useService from 'hook/useService';
+import { ICON, ROUTE, TRANSLATION } from 'constant';
 import {
   AvatarContainer,
   AvatarLabel,

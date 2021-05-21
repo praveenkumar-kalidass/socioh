@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Text, Icon, Button } from 'native-base';
 
-import { COLOR, FONT, SPACING } from '../../constant';
+import { COLOR, FONT, SPACING } from 'constant';
 
 export const LoginContainer = styled.View`
   background-color: ${COLOR.PRIMARY};

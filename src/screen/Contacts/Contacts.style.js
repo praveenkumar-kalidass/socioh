@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Body } from 'native-base';
 
-import { SPACING } from '../../constant';
+import { SPACING } from 'constant';
 
 export const ContactsContainer = styled.View`
   flex: 1;

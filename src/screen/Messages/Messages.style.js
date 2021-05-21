@@ -1,7 +1,7 @@
 import { Text } from 'native-base';
 import styled from 'styled-components/native';
 
-import { COLOR, SPACING } from '../../constant';
+import { COLOR, SPACING } from 'constant';
 
 export const MessagesContainer = styled.View`
   flex: 1;

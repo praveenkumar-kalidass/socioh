@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, fireEvent, act } from '@testing-library/react-native';
 
-import validateFields from '../../helper/validateFields';
-import useService from '../../hook/useService';
+import validateFields from 'helper/validateFields';
+import useService from 'hook/useService';
 import Signin from './index';
 
-jest.mock('../../helper/validateFields');
+jest.mock('helper/validateFields');
 
-jest.mock('../../hook/useService');
+jest.mock('hook/useService');
 
 describe('Signin', () => {
   const mockNavigation = { navigate: jest.fn() };

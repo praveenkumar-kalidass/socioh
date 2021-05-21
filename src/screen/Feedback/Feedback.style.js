@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Text, Thumbnail, Icon, CardItem } from 'native-base';
 
-import { FONT, SPACING } from '../../constant';
+import { FONT, SPACING } from 'constant';
 
 export const FeedbackContainer = styled.View`
   padding-horizontal: ${SPACING.SPACE_20};

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardItem, Thumbnail } from 'native-base';
 
-import UserAvatar from '../../asset/image/user.png';
-import useService from '../../hook/useService';
-import { CONSTANT, TRANSLATION } from '../../constant';
-import wrapPattern from '../../helper/wrapPattern';
+import UserAvatar from 'asset/image/user.png';
+import useService from 'hook/useService';
+import { CONSTANT, TRANSLATION } from 'constant';
+import wrapPattern from 'helper/wrapPattern';
 import {
   ProfileContainer,
   AvatarContainer,

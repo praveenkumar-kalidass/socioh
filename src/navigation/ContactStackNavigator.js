@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { ROUTE, COLOR, TRANSLATION } from '../constant';
-import Header from '../component/Header';
-import Contacts from '../screen/Contacts';
-import Contact from '../screen/Contact';
+import { ROUTE, COLOR, TRANSLATION } from 'constant';
+import Header from 'component/Header';
+import Contacts from 'screen/Contacts';
+import Contact from 'screen/Contact';
 
 const ContactStack = createStackNavigator();
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Icon, Text } from 'native-base';
 
-import { COLOR, FONT, SPACING } from '../../constant';
+import { COLOR, FONT, SPACING } from 'constant';
 
 export const ContactContainer = styled.View`
   flex: 1;
