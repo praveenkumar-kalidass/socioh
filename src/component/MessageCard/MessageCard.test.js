@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
 
-import UserAvatar from '../../asset/image/user.png';
+import UserAvatar from 'asset/image/user.png';
 import MessageCard from './index';
 import { act } from 'react-test-renderer';
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Badge, Card, Text } from 'native-base';
 
-import { COLOR, FONT, SPACING } from '../../constant';
+import { COLOR, FONT, SPACING } from 'constant';
 
 export const HighlightCard = styled(Card)`
   ${({ highlight }) => (highlight ? `border-color: ${COLOR.PRIMARY};` : '')}

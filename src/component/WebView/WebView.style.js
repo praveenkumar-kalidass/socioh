@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Icon, Input } from 'native-base';
 
-import { COLOR, SPACING } from '../../constant';
+import { COLOR, SPACING } from 'constant';
 
 export const ModalContainer = styled.View`
   flex: 1;

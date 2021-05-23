@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { Icon, Text } from 'native-base';
-import { COLOR, SPACING } from '../../constant';
+import { COLOR, SPACING } from 'constant';
 
 export const TileContainer = styled.View`
   align-self: ${({ received }) => (received ? 'flex-start' : 'flex-end')};
